@@ -1,0 +1,75 @@
+-- BOOK --
+CREATE TABLE Book (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    quantity INT,
+    purchasePrice DECIMAL(10,2),
+    sellingPrice DECIMAL(10,2),
+    publisher VARCHAR(100),
+    author VARCHAR(100),
+    isbn VARCHAR(20),
+    genre VARCHAR(100),
+    section VARCHAR(50),
+    ImageSrc VARCHAR(100) DEFAULT NULL
+);
+
+truncate table book;
+select * from book;
+drop table book;
+
+INSERT INTO Book (id, name, quantity, purchasePrice, sellingPrice, publisher, author, isbn, genre, section, ImageSrc)
+VALUES
+(1, 'To Kill a Mockingbird', 30, 4.99, 7.49, 'HarperCollins', 'Harper Lee', '9780061120084', 'Novel', 'Others', '/view/images/Books/tokillamockingbird.jpg'),
+(2, '1984', 25, 4.49, 6.99, 'Secker & Warburg', 'George Orwell', '9780451524935', 'Adventure', 'Recommended For You', '/view/images/Books/1984.jpg'),
+(3, 'Pride and Prejudice', 20, 3.49, 5.49, 'Penguin Classics', 'Jane Austen', '9780141439518', 'Romance', 'Others', '/view/images/Books/prideandprejudice.jpg'),
+(4, 'Moby-Dick', 15, 3.99, 5.49, 'Harper & Brothers', 'Herman Melville', '9780142437247', 'Adventure', 'Others', '/view/images/Books/mobydick.jpg'),
+(5, 'War and Peace', 10, 5.99, 8.99, 'Penguin Classics', 'Leo Tolstoy', '9780140447934', 'Novel', 'Others', '/view/images/Books/warandpeace.jpg'),
+(6, 'The Catcher in the Rye', 25, 3.49, 4.99, 'Litte, Brown, and Company', 'J.D. Salinger', '9780316769488', 'Novel', 'Recommended For You', '/view/images/Books/thecatcherintherye.jpg'),
+(7, 'Invisible Man', 12, 3.99, 5.99, 'Ralph Ellison', 'Ralph Ellison', '9780679732761', 'Novel', 'Others', '/view/images/Books/invisibleman.jpg'),
+(8, 'Lord of the Rings', 10, 7.99, 11.49, 'Allen & Unwin', 'J.R.R. Tolkien', '9780544003415', 'Adventure', 'Best Seller', '/view/images/Books/lordoftherings.jpg'),
+(9, 'Brave New World', 18, 3.99, 5.49, 'Chatto & Windus', 'Aldous Huxley', '9780060850524', 'Novel', 'Others', '/view/images/Books/bravenewworld.jpg'),
+(10, 'Anne of Green Gables', 20, 3.49, 4.99, 'L.C. Page & Company', 'Lucy Maud Montgomery', '9780553213138', 'Fairy Tale', 'Recommended For You', '/view/images/Books/anneofgreengables.jpg'),
+(11, 'Vermont', 12, 2.49, 3.99, 'Conran Octopus', 'Anonymous', '9780195602140', 'Novel', 'Others', '/view/images/Books/vermont.jpg'),
+(12, 'Muôn kiếp nhân sinh', 20, 3.49, 5.49, 'NXB Trẻ', 'Nguyên Phong', '9786045874106', 'Self-help', 'Others', '/view/images/Books/muonkiepnhansinh.jpg'),
+(13, 'Làm bạn với hình, làm tình với chữ', 25, 3.49, 4.99, 'NXB Trẻ', 'Bút Chì', '9786045887581', 'Self-help', 'Others', '/view/images/Books/lambanvoihinhlamtinhvoichu.jpg'),
+(14, 'Tôi tài giỏi, bạn cũng thế', 15, 1.99, 2.99, 'NXB Lao Động', 'Adam Khoo', '9786045903687', 'Self-help', 'Recommended For You', '/view/images/Books/toitaigioibancungthe.jpg'),
+(15, 'Bí mật của sự may mắn', 18, 1.99, 3.49, 'NXB Trẻ', 'Xiaohui', '9786045864585', 'Self-help', 'Best Seller', '/view/images/Books/bimatcuasumayman.jpg'),
+(16, 'Tình yêu và tham vọng', 30, 1.49, 2.49, 'NXB Văn Học', 'Phan Tất Hùng', '9786043134534', 'Novel', 'Recommended For You', '/view/images/Books/tinhyeuvathamvong.jpg'),
+(17, 'The Alchemist', 25, 5.99, 8.99, 'HarperOne', 'Paulo Coelho', '9780062315007', 'Novel', 'Others', '/view/images/Books/thealchemist.jpg'),
+(18, 'Chuyện con mèo dạy hải âu bay', 15, 0.99, 1.99, 'NXB Trẻ', 'Luis Sepúlveda', '9786042114030', 'Fairy Tale', 'Others', '/view/images/Books/chuyenconmeodayhaiaubay.jpg'),
+(19, 'Nhà giả kim', 20, 1.49, 1.99, 'NXB Lao Động', 'Paulo Coelho', '9786049634562', 'Novel', 'Best Seller', '/view/images/Books/nhagiakim.jpg'),
+(20, 'Tuổi trẻ đáng giá bao nhiêu?', 22, 1.49, 2.99, 'NXB Trẻ', 'Rosie Nguyễn', '9786046836310', 'Self-help', 'Recommended For You', '/view/images/Books/tuoitredanggiabaonhieu.jpg'),
+(21, 'Dế mèn phiêu lưu ký', 30, 0.99, 1.49, 'NXB Kim Đồng', 'Tô Hoài', '9786042024193', 'Fairy Tale', 'Others', '/view/images/Books/demenphieuluuky.jpg'),
+(22, 'Không gia đình', 28, 1.49, 1.99, 'NXB Văn học', 'Hector Malot', '9786049630007', 'Novel', 'Others', '/view/images/Books/khonggiadinh.jpg'),
+(23, 'Đắc nhân tâm', 25, 1.49, 1.99, 'NXB Tổng hợp TP.HCM', 'Dale Carnegie', '9786045885197', 'Self-help', 'Recommended For You', '/view/images/Books/dacnhantam.jpg'),
+(24, 'Mùa hè năm ấy', 30, 1.49, 2.49, 'NXB Trẻ', 'Markus Zusak', '9781743511001', 'Novel', 'Recommended For You', '/view/images/Books/muahenamay.jpg'),
+(25, 'Nhóc Nicolas – Những chuyện chưa kể', 30, 3.49, 4.49, 'NXB Trẻ', 'René Goscinny & Jean-Jacques Sempé', '9786041115893', 'Comic', 'Others', '/view/images/Books/nhocnicolasvanhungchuyenchuake.jpg'),
+(26, 'Dấu chân trên cát', 40, 3.49, 4.49, 'NXB Tổng Hợp TP.HCM', 'Nguyễn Phong', '9786045852787', 'Self-help', 'Recommended For You', '/view/images/Books/dauchantrencat.jpg'),
+(27, 'Cuốn sách hoàn hảo về Ngôn ngữ cơ thể', 30, 3.99, 5.49, 'NXB Thế Giới', 'Barbara Pease & Allan Pease', '9786047756952', 'Self-help', 'Recommended For You', '/view/images/Books/cuonsachhoanhaovengonngucothe.jpg'),
+(28, 'Bố già', 18, 2.99, 4.49, 'Random House', 'Mario Puzo', '9780451205767', 'Novel', 'Best Seller', '/view/images/Books/bogia.jpg'),
+(29, 'Mật mã Da Vinci', 15, 2.49, 3.99, 'Doubleday', 'Dan Brown', '9780307474278', 'Novel', 'Best Seller', '/view/images/Books/matmadavinci.jpg'),
+(30, 'Giết con chim nhại', 20, 2.49, 3.99, 'HarperCollins', 'Harper Lee', '9780061120084', 'Novel', 'Recommended For You', '/view/images/Books/gietconchimnhai.jpg'),
+(31, 'Vũ trụ trong vỏ hạt dẻ', 30, 4.99, 7.49, 'NXB Hà Nội', 'Stephen Hawking', '9786046831130', 'Horror', 'Recommended For You', '/view/images/Books/vutrutrongvohatde.jpg'),
+(32, 'Án mạng trên chuyến tàu tốc hành phương Đông', 25, 3.49, 4.99, 'NXB Hà Nội', 'Agatha Christie', '9786046892246', 'Horror', 'Best Seller', '/view/images/Books/anmangtrenchuyentautochanhphuongdong.jpg'),
+(33, 'Vượt lên chính mình', 25, 1.49, 2.49, 'NXB Thế Giới', 'Nguyễn Hữu Long', '9786049238476', 'Self-help', 'Recommended For You', '/view/images/Books/vuotlenchinhminh.jpg'),
+(34, 'Hành trình của linh hồn', 20, 4.99, 6.99, 'NXB Lao động', 'Michael Newton', '9786045962283', 'Self-help', 'Recommended For You', '/view/images/Books/hanhtrinhcualinhhon.jpg'),
+(35, 'Những tấm lòng cao cả', 22, 1.49, 2.49, 'NXB Phụ Nữ', 'Emile Zola', '9782213449249', 'Novel', 'Others', '/view/images/Books/nhungtamlongcaoca.jpg'),
+(36, 'Bóng hình của gió', 30, 3.99, 5.99, 'NXB Hội Nhà Văn', 'Carlos Ruiz Zafón', '9786046819657', 'Novel', 'Recommended For You', '/view/images/Books/bonghinhcuagio.jpg'),
+(37, 'Kinh tế học dành cho doanh nhân', 15, 3.49, 5.49, 'Thế Giới', 'Shlomo Maital', '9786047708119', 'Self-help', 'Recommended For You', '/view/images/Books/kinhtehocdanhchodoanhnhan.jpg'),
+(38, 'Con đường đi đến thành công bằng sự tử tế', 18, 3.99, 5.99, 'NXB Lao Động', 'Inamori Kazuo', '9786049225638', 'Self-help', 'Recommended For You', '/view/images/Books/conduongdidenthanhcongbangsutute.jpg'),
+(39, 'Những người khốn khổ', 12, 2.49, 3.99, 'NXB Văn Học', 'Victor Hugo', '9780140444303', 'Novel', 'Others', '/view/images/Books/nhungnguoikhonkho.jpg'),
+(40, 'Chạm tới giấc mơ', 10, 2.99, 4.99, 'NXB Trẻ', 'Sơn Tùng M-TP', '9786045867840', 'Self-help', 'Others', '/view/images/Books/chamtoigiacmo.jpg'),
+(41, 'Tôi đã kiếm 1 triệu đô lần đầu trên Internet thế nào?', 12, 3.49, 5.49, 'NXB Lao Động', 'Ewen Chia', '9786045999121', 'Self-help', 'Recommended For You', '/view/images/Books/toidakiemmottrieudolandautreninternetnhuthenao.jpg'),
+(42, 'Những kẻ xuất chúng', 20, 3.99, 5.49, 'NXB Thế Giới', 'Malcolm Gladwell', '9781447474177', 'Self-help', 'Others', '/view/images/Books/nhungkexuatchung.jpg'),
+(43, 'Thiên tài bên trái, kẻ điên bên phải', 25, 3.49, 4.99, 'NXB Thế Giới', 'Đặng Hoàng Giang', '9786047747347', 'Self-help', 'Recommended For You', '/view/images/Books/thientaibentraikedienbenphai.jpg'),
+(44, 'Sổ tay nhà thôi miên', 30, 3.49, 5.49, 'NXB Thế Giới', 'John K. Pollock', '9786047745565', 'Self-help', 'Recommended For You', '/view/images/Books/sotaynhathoimien.jpg'),
+(45, 'Tam quốc diễn nghĩa', 50, 4.99, 6.49, 'NXB Kim Đồng', 'La Quán Trung', '9786042068471', 'Novel', 'Others', '/view/images/Books/tamquocdiennghia.jpg'),
+(46, 'Ông già và biển cả', 40, 2.99, 3.99, 'NXB Văn Học', 'Ernest Hemingway', '9786049639872', 'Novel', 'Others', '/view/images/Books/onggiavabienca.jpg'),
+(47, 'Đôi lứa xứng đôi, nửa đêm cười', 35, 2.49, 3.49, 'NXB Hội Nhà Văn', 'Nam Cao', '9786049639889', 'Novel', 'Others', '/view/images/Books/doiluaxungdoinuademcuoi.jpg'),
+(48, 'Bản đồ tâm hồn con người', 30, 3.99, 5.99, 'NXB Tri Thức', 'Murray Stein', '9786049803105', 'Self-help', 'Recommended For You', '/view/images/Books/bandotamhonconnguoicuajung.jpg'),
+(49, 'Thế giới phẳng', 40, 4.49, 6.49, 'NXB Trẻ', 'Thomas L. Friedman', '9786041126318', 'Self-help', 'Best Seller', '/view/images/Books/thegioiphang.jpg'),
+(50, 'Tìm mình trong thế giới hậu tuổi thơ', 35, 3.99, 5.49, 'NXB Hội Nhà Văn', 'Đặng Hoàng Giang', '9786049828498', 'Self-help', 'Recommended For You', '/view/images/Books/timminhtrongthegioihautuoitho.jpg');
+
+SELECT *
+FROM book
+where genre = 'Novel';

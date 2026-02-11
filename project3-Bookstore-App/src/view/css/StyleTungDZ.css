@@ -1,0 +1,423 @@
+/* File style.css */
+.anchor-pane-background1 {
+	-fx-background-color: #2C3E50 ;
+
+}
+
+.text-font{
+	-fx-font-family: "Segoe UI", sans-serif;
+}
+
+.transparent-pane {
+    -fx-background-color: rgba(0,0,0,0 ); /* màu đen, độ mờ (100 - 0.05)% */
+}
+
+.White-background {
+	-fx-background-color: rgba(255, 255, 255); /* trong suất background*/
+	-fx-background-radius: 15; /* bo góc đẹp hơn */
+}
+
+.Red-background {
+	-fx-background-color: #FA8072	;
+	-fx-background-radius: 15; /* bo góc đẹp hơn */
+}
+
+.Payment-pane {
+-fx-background-color: linear-gradient(
+    from 0% 0% to 100% 100%,
+    #151C62 0%,
+    #151C62 20%,
+    #3F468F 80%,
+    #7D82BB 95%,
+    #A3A7D2 100%
+);
+    -fx-background-radius: 15;
+}
+
+.White-background1 {
+	-fx-background-color: rgba(255, 255, 255); 
+	-fx-background-radius: 3; 
+
+}
+
+.transparent-button {
+
+    -fx-background-color: rgba(255, 255, 255, 0); /* trong suất background*/
+	-fx-text-fill: rgba(255, 255, 255, 0); /* trong suất text*/
+
+    -fx-background-radius: 10; /* bo góc đẹp hơn */
+}
+
+.transparent-black {
+	
+	    -fx-background-color: rgba(0, 0, 0, 0.85); /* trắng mờ */
+	    -fx-background-radius: 15; /* bo góc */
+	    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 20, 0.5, 0, 4); /* đổ bóng */
+	    -fx-padding: 20;
+	
+}
+
+
+.anchor-pane-background2 {
+	-fx-background-color: linear-gradient(#d6a2a8	, #eab8c9);
+    -fx-background-radius: 10;
+}
+
+.shadow-effect {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 20, 0.5, 0, 5);
+	-fx-background-color: rgba(255, 255, 255, 0.5); /* màu đen, độ mờ 50% */
+}
+
+.shadow-effect1 {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 20, 0.3, 0, 3);
+}
+
+.shadow-effect2{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0), 10, 0, 0, 10);
+}
+
+.transparent-circle {
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-shape: "M 100,0 A 100,100 0 1,0 100,200 A 100,100 0 1,0 100,0 Z"; /* Hình tròn */
+    -fx-min-width: 200px;
+    -fx-min-height: 200px;
+}
+
+.button-style1 {
+  
+    -fx-border-color: #3E70FA; /* Màu viền đen */
+    -fx-border-width: 3; /* Độ dày viền là 2px */
+    -fx-text-transform: uppercase; /* Chữ in hoa */
+	-fx-text-color: #3E70FA; /* Chữ in hoa */
+	-fx-background-radius: 10;
+	-fx-border-radius: 10;
+
+}
+
+.node-surround-label1{
+	-fx-padding: 4 8; /* top-bottom 6px, left-right 12px */
+	-fx-background-color: white;
+	-fx-background-radius: 10;
+	-fx-border-color: #3E70FA;
+	-fx-text-color: #3E70FA; /* Chữ in hoa */
+
+	-fx-border-radius: 10;
+	-fx-border-width: 3;
+}
+
+.node-surround-label2{
+	-fx-padding: 4 8; /* top-bottom 6px, left-right 12px */
+	-fx-background-color: #3E70FA;
+	-fx-background-radius: 10;
+	-fx-border-color: white;
+	-fx-text-color: white; /* Chữ in hoa */
+
+	-fx-border-radius: 10;
+	-fx-border-width: 3;
+}
+
+.node-surround-pane1{
+
+	-fx-background-color: white;
+	-fx-background-radius: 0;
+	-fx-border-color: #3E70FA;
+	-fx-text-color: #3E70FA; /* Chữ in hoa */
+
+	-fx-border-radius: 0;
+	-fx-border-width: 4;
+}
+
+.node-surround-pane2{
+		-fx-background-color: #3E70FA;
+		-fx-background-radius: 0;
+		-fx-border-color: #3E70FA;
+		-fx-text-color: #3E70FA; /* Chữ in hoa */
+
+		-fx-border-radius: 20;
+		-fx-border-width: 4;
+}
+
+
+	.button-style2 {
+	    -fx-background-color:white; /* Màu nền trắng */
+	    -fx-text-fill: #607274; 
+	    -fx-border-color: #607274	; /* Màu viền đen */
+	    -fx-border-width: 3; 
+	    -fx-text-transform: uppercase; /* Chữ in hoa */
+	}
+	
+.selected{
+  -border-top-left-radius: 12px;
+  -border-bottom-left-radius: 12px;
+  -border-top-right-radius: 0;
+  -border-bottom-right-radius: 0;
+  -fx-background-color: #5D6D7E;
+}
+
+.mouse-moved:hover{
+	-fx-background-color: #5D6D7E;
+}
+
+.selected:hover {
+    /* Your hover color for selected nav */
+    -fx-background-color: #4A5A6A; /* Example: a bit lighter than selected */
+}
+
+.best-seller-section {
+/* Gradient nền với màu salmon */
+-fx-background-color: linear-gradient(to bottom right, #81D8B8, #A8E6CF);
+
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
+}
+.label-bestseller {
+	-fx-background-color: rgba(255, 255, 255); /* trong suất background*/
+	-fx-background-radius: 8; /* bo góc đẹp hơn */
+}
+
+.viewport {
+    -fx-background-color: transparent;
+}
+
+.button-self-help{
+	-fx-background-color: #D4C540;
+}
+	
+
+
+.size-item-image{
+	 -fx-fit-width: 140;
+    -fx-fit-height: 220;
+    -fx-preserve-ratio: true;
+}
+
+.button-horror{
+		-fx-background-color: #e57373;
+	
+}
+
+.button-adventure{
+		-fx-background-color: #73D0F9;
+	
+}
+
+.button-romance{
+		-fx-background-color: #f8bbd0;
+	
+}
+
+.button-comio{
+		-fx-background-color: #ffe082;
+	
+}
+
+.button-novel{
+		-fx-background-color: #ce93d8;
+	
+}
+
+.button-fairy-tale{
+		-fx-background-color: #c5e1a5;
+	
+}
+
+.button-category {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    
+    -fx-font-size: 12px;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+}
+
+.button-category:hover {
+    -fx-underline: true;
+}
+
+.mouse-selfhelp:hover{
+	-fx-background-color: #958600;
+}
+.mouse-horror:hover{
+	-fx-background-color: #741616;
+}
+.mouse-adventure:hover{
+	-fx-background-color: #06587d;
+}
+.mouse-romance:hover{
+	-fx-background-color: #9e1041;
+}
+.mouse-comic:hover{
+	-fx-background-color: #9a7400;
+}
+.mouse-novel:hover{
+	-fx-background-color: #61276b;
+}
+.mouse-fairy-tale:hover{
+	-fx-background-color: #517527;
+}
+
+.fixed-image {
+    -fx-fit-width: 100;
+    -fx-fit-height: 120;
+}
+
+.fixed-image-information {
+    -fx-fit-width: 205;
+    -fx-fit-height: 290;
+}
+
+.button-quantity-l:hover  {
+	-fx-background-radius: 15 0 0 15;
+    -fx-background-color: gray;
+    -fx-text-fill: white;
+}
+
+.button-quantity:hover {
+	-fx-background-radius: 0 15 15 0;
+    -fx-background-color: gray;
+    -fx-text-fill: white;
+}
+
+.button-style-Payment {
+    -fx-border-color: #ede7ff; /* Màu viền đen */
+    -fx-border-width: 0.5; /* Độ dày viền là 2px */
+    -fx-text-transform: uppercase; /* Chữ in hoa */
+	-fx-text-color: #3E70FA; /* Chữ in hoa */
+	-fx-background-radius: 50;
+	-fx-border-radius: 50;
+
+}
+
+.button-style-Checkout {
+    -fx-border-color: #ede7ff; /* Màu viền đen */
+    -fx-border-width: 0.5; /* Độ dày viền là 2px */
+    -fx-text-transform: uppercase; /* Chữ in hoa */
+	-fx-text-color: #3E70FA; /* Chữ in hoa */
+	-fx-background-radius: 50;
+	-fx-background-color: #ede7ff;
+	-fx-border-radius: 50;
+
+}
+
+.button-payment-selected: hover, 
+.button-payment-selected: selected {
+	-fx-border-width: 2; /* Độ dày viền là 2px */
+}
+
+.button-checkout-selected: hover, 
+.button-checkout-selected: selected {
+	-fx-border-color: #000435; /* Màu viền đen */
+	-fx-background-color: #000435;
+}
+
+.separator {
+    -fx-padding: 0 0 0 0;         /* Bỏ khoảng đệm */
+    -fx-border-width: 0.1 0 0 0;  /* Độ dày đường kẻ */
+}
+
+.button-style-Payment2 {
+    -fx-border-color: #ede7ff; /* Màu viền đen */
+    -fx-border-width: 0.5; /* Độ dày viền là 2px */
+    -fx-text-transform: uppercase; /* Chữ in hoa */
+	-fx-text-color: #3E70FA; /* Chữ in hoa */
+	-fx-background-radius: 50;
+	-fx-border-radius: 50;
+
+}
+
+.custom-textfield {
+    -fx-text-fill: #A3A7D2;        /* Màu chữ */
+    -fx-prompt-text-fill: #A3A7D2; /* Màu placeholder (gợi ý) */
+}
+.button-AddtoCart{
+	-fx-background-color: black	;
+}
+.mouse-AddtoCart:hover{
+	-fx-background-color: #696969;
+	
+}
+
+
+.text-field-account{
+	-fx-border-color: gray;
+	-fx-border-radius: 10;
+	-fx-background-color: transparent;
+	}
+
+
+.italic-bold-font{
+	    -fx-font-weight: bold;
+    -fx-font-style: italic;
+}
+.setting-button {
+    -fx-background-color: #ECECEC ; 
+    -fx-text-fill: #1C1C1C;
+
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0.3, 0, 2);
+    -fx-cursor: hand;
+}
+
+.shadow-effect{
+	    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0.3, 0, 2);
+	
+}
+
+.setting-button:hover {
+    -fx-background-color: #C0C0C0;
+}
+	
+
+.best-seller-scroll .scroll-bar:vertical {
+    -fx-pref-width: 8px;
+    -fx-background-color: transparent;
+}
+
+.best-seller-scroll .scroll-bar:horizontal {
+    -fx-pref-height: 8px;
+    -fx-background-color: transparent;
+}
+
+.best-seller-scroll .scroll-bar .thumb {
+    -fx-background-color: #61C9A8; /* Mint đậm */
+    -fx-background-radius: 6px;
+}
+
+.best-seller-scroll .scroll-bar .track {
+    -fx-background-color: gray; /* Mint nhạt */
+    -fx-background-radius: 6px;
+}
+
+.best-seller-scroll .increment-button,
+.best-seller-scroll .decrement-button {
+    -fx-opacity: 0;
+}
+
+.main-scroll .scroll-bar:vertical {
+    -fx-pref-width: 8px;
+    -fx-background-color: transparent;
+}
+
+.main-scroll .scroll-bar:horizontal {
+    -fx-pref-height: 8px;
+    -fx-background-color: transparent;
+}
+
+.main-scroll .scroll-bar .thumb {
+    -fx-background-color: #CCCCCC; /* Xám nhẹ */
+    -fx-background-radius: 6px;
+}
+
+.main-scroll .scroll-bar .track {
+    -fx-background-color: #F2F2F2; /* Xám rất nhạt */
+    -fx-background-radius: 6px;
+}
+
+.main-scroll .increment-button,
+.main-scroll .decrement-button {
+    -fx-opacity: 0;
+}

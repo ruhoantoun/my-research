@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showInfo" prefHeight="295.0" prefWidth="175.0" styleClass="White-background" stylesheets="@../css/StyleTungDZ.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="135.0" prefWidth="135.0">
+         <children>
+            <ImageView fx:id="bookImage" fitHeight="215.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Books/anmangtrenchuyentautochanhphuongdong.jpg" />
+               </image>
+               <styleClass>
+                  <String fx:value="text-font" />
+                  <String fx:value="size-item-image" />
+               </styleClass>
+            </ImageView>
+         </children>
+      </HBox>
+      <Label fx:id="bookName" prefHeight="25.0" prefWidth="148.0" text="Metamorphosis">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="authorName" text="Franz Kafka" />
+      <Label fx:id="bookPrice" text="14.99 $">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+   </padding>
+</VBox>

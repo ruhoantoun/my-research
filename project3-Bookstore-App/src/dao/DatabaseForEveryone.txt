@@ -1,0 +1,55 @@
+use hustbookstore;
+create table customer (
+	id int primary key auto_increment,
+    username VARCHAR(50) NOT NULL unique,
+    password varchar(50) not null, 
+    name varchar(30),
+    phonenumber varchar(20),
+    address varchar(25)
+);
+
+select * from customer;
+
+insert into customer(username, password) values ('dongvanthinh', '123456'); 
+
+delete from customer where id = 3;
+
+create table manager (
+	id int primary key auto_increment,
+    name varchar(30),
+    salary double,
+    username VARCHAR(50) NOT NULL unique,
+    password varchar(50) not null
+);
+
+select * from manager;
+
+insert into manager(username, password) values ('dongvanthinh', '123456');
+insert into manager(username, password) values ('nguyenvuminh', '123456');
+
+CREATE TABLE book (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    quantity INT NOT NULL DEFAULT 0,
+    purchasePrice DOUBLE ,
+    sellingPrice DOUBLE ,
+    ImageSrc VARCHAR(100) DEFAULT NULL,
+    publisher VARCHAR(100),
+    author VARCHAR(100) NOT NULL,
+    isbn VARCHAR(50) UNIQUE,
+    section VARCHAR(50),
+    genre VARCHAR(30)
+);
+
+select * from book;
+
+drop table book;
+
+insert into book(name, sellingPrice, ImageSrc, author, section) values ('Metamorphosis', 19, '/view/images/Books/metamorphosis.jpg', 'Franz Kafka', 'Best Seller');
+insert into book(name, sellingPrice, ImageSrc, author, section) values ('1984', 20, '/view/images/Books/1984.jpg', 'Geogre Orwell', 'Best Seller');
+insert into book(name, sellingPrice, ImageSrc, author, section) values ('Án Mạng Trên Chuyến Tàu Phương Đông', 25, '/view/images/Books/anmangtrenchuyentautochanhphuongdong.jpg', 'Agatha Christie', 'Best Seller');
+
+insert into book(name, sellingPrice, ImageSrc, author, section) values ('Metamorphosis', 19, '/view/images/Books/metamorphosis.jpg', 'Franz Kafka', 'Recommended For You');
+
+delete from book
+where id = 7;

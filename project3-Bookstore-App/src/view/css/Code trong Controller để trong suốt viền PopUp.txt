@@ -1,0 +1,26 @@
+public class MainController {
+
+    @FXML
+    private void openPopup(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("PopupWindow.fxml"));
+            Parent root = loader.load();
+
+            // Lấy controller nếu muốn truyền dữ liệu vào
+            PopupWindowController popupController = loader.getController();
+            popupController.setInfo("Chi tiết sách hoặc nội dung cần hiển thị");
+
+            Scene scene = new Scene(root);
+            scene.setFill(Color.TRANSPARENT);
+            scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.TRANSPARENT);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}

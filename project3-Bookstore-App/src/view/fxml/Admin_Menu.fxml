@@ -1,0 +1,2251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="900.0" stylesheets="@../css/login_screen.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Admin_Menu_Controller">
+    <left>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="130.0" styleClass="menu_pane" BorderPane.alignment="CENTER">
+            <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="110.0">
+               <children>
+                  <Label fx:id="title" prefHeight="24.0" prefWidth="74.0" text="Hust" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="title1" layoutX="10.0" layoutY="10.0" prefHeight="24.0" prefWidth="114.0" text="Book Store" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="16.0" right="16.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox fx:id="dashboard_bar" alignment="CENTER_LEFT" layoutX="10.0" layoutY="89.0" maxWidth="-Infinity" prefHeight="40.0" prefWidth="120.0" styleClass="menu">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Logo/pie-chart.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Button fx:id="dashboard_button" mnemonicParsing="false" onAction="#showMenuPage" styleClass="menu-button" text="Dashboard" textFill="WHITE" />
+               </children>
+            </HBox>
+            <HBox fx:id="employee_bar" alignment="CENTER_LEFT" layoutX="10.0" layoutY="220.0" maxWidth="-Infinity" prefHeight="40.0" prefWidth="120.0" styleClass="menu">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Logo/multiple-users-silhouette.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Button fx:id="employee_button" mnemonicParsing="false" onAction="#showMenuPage" styleClass="menu-button" text="Employees" textFill="WHITE" />
+               </children>
+            </HBox>
+            <HBox fx:id="order_bar" alignment="CENTER_LEFT" layoutX="10.0" layoutY="260.0" maxWidth="-Infinity" prefHeight="40.0" prefWidth="120.0" styleClass="menu">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Logo/credit-card.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Button fx:id="order_button" mnemonicParsing="false" onAction="#showMenuPage" styleClass="menu-button" text="Orders" textFill="WHITE" />
+               </children>
+            </HBox>
+            <HBox fx:id="storage_bar" alignment="CENTER_LEFT" layoutX="10.0" layoutY="300.0" maxWidth="-Infinity" prefHeight="40.0" prefWidth="120.0" styleClass="menu">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Logo/boxes.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Button fx:id="storage_button" mnemonicParsing="false" onAction="#showMenuPage" styleClass="menu-button" text="Storage" textFill="WHITE" />
+               </children>
+            </HBox>
+            <HBox fx:id="dashboard_bar1" alignment="CENTER_LEFT" layoutX="16.0" layoutY="118.0" maxWidth="-Infinity" prefHeight="40.0" prefWidth="120.0" styleClass="menu">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" styleClass="icon-box">
+                     <image>
+                        <Image url="@../images/Logo/account.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Button fx:id="setting_button" mnemonicParsing="false" onAction="#showMenuPage" styleClass="menu-button" text="Settings" textFill="WHITE" />
+               </children>
+            </HBox>
+                <Region prefHeight="220.0" prefWidth="130.0" />
+            <HBox fx:id="sign_out" alignment="CENTER_LEFT" layoutX="10.0" layoutY="340.0" maxWidth="-Infinity" prefHeight="40.0" prefWidth="120.0" styleClass="menu">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Logo/logout.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Button fx:id="sign_out_button" mnemonicParsing="false" onAction="#logout" styleClass="menu-button" text="Sign out" textFill="WHITE" />
+               </children>
+            </HBox>
+            </children>
+        </VBox>
+    </left>
+   <center>
+      <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="530.0" prefWidth="770.0" stylesheets="@../css/login_screen.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="dashboard_page" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0" styleClass="title-pane">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard">
+                                 <font>
+                                    <Font name="Calibri" size="24.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="16.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Region maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="428.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="470.0" prefWidth="770.0">
+                     <content>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="472.0" prefWidth="770.0">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="770.0">
+                                 <children>
+                                    <Button fx:id="d_day_button" mnemonicParsing="false" styleClass="date-button" text="Day">
+                                       <HBox.margin>
+                                          <Insets right="16.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="d_week_button" mnemonicParsing="false" styleClass="date-button" text="Week">
+                                       <HBox.margin>
+                                          <Insets right="16.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="d_month_button" mnemonicParsing="false" styleClass="date-button" text="Month">
+                                       <HBox.margin>
+                                          <Insets right="16.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="d_year_button" mnemonicParsing="false" styleClass="date-button" text="Year">
+                                       <HBox.margin>
+                                          <Insets right="24.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="770.0">
+                                 <children>
+                                    <VBox fx:id="revenue_buton" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0" prefWidth="208.0" styleClass="card-pane">
+                                       <children>
+                                          <Label styleClass="card-title" text="Revenue">
+                                             <VBox.margin>
+                                                <Insets left="12.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="totalRevenueLabel" styleClass="card-value" text="Label" textFill="#1c1c1c">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="12.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="32.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="costs_box" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0" prefWidth="208.0" styleClass="card-pane">
+                                       <children>
+                                          <Label styleClass="card-title" text="Costs">
+                                             <VBox.margin>
+                                                <Insets left="12.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="totalCost_BigLabel" styleClass="card-value" text="Label" textFill="#1c1c1c">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="12.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="32.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="profitx_box" layoutX="395.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0" prefWidth="208.0" styleClass="card-pane">
+                                       <children>
+                                          <Label styleClass="card-title" text="Profits">
+                                             <VBox.margin>
+                                                <Insets left="12.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="totalProfitLabel" styleClass="card-value" text="Label" textFill="#1c1c1c">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="12.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="32.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="240.0" prefWidth="770.0">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="240.0" prefWidth="448.0" styleClass="chart-pane">
+                                       <HBox.margin>
+                                          <Insets left="54.0" right="32.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <Label fx:id="chart_title_dashboard" text="Revenue">
+                                             <VBox.margin>
+                                                <Insets bottom="8.0" left="24.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <BarChart fx:id="revenueChart" prefHeight="300.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                                            <xAxis>
+                                              <CategoryAxis fx:id="dateAxis" label="date" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis fx:id="revenueAxis" />
+                                            </yAxis>
+                                          </BarChart>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="208.0" styleClass="expenses-pane">
+                                       <children>
+                                          <Label fx:id="expenses_label_dashboard" text="Expenses">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="160.0" styleClass="progress-bar-container">
+                                             <VBox.margin>
+                                                <Insets top="16.0" />
+                                             </VBox.margin>
+                                             <children>
+                                                <StackPane alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="160.0" styleClass="progress-bar-bg">
+                                                   <children>
+                                                      <Region fx:id="bar10" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" styleClass="progress-bar-fill" />
+                                                      <Label fx:id="cost1" text="Label" textFill="WHITE">
+                                                         <StackPane.margin>
+                                                            <Insets left="8.0" />
+                                                         </StackPane.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="30.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="160.0" styleClass="progress-bar-container">
+                                             <children>
+                                                <StackPane alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="160.0" styleClass="progress-bar-bg">
+                                                   <children>
+                                                      <Region fx:id="bar20" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="120.0" styleClass="progress-bar-fill" />
+                                                      <Label fx:id="cost2" text="Label" textFill="WHITE">
+                                                         <StackPane.margin>
+                                                            <Insets left="8.0" />
+                                                         </StackPane.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="8.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox layoutX="30.0" layoutY="98.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="160.0" styleClass="progress-bar-container">
+                                             <children>
+                                                <StackPane alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="160.0" styleClass="progress-bar-bg">
+                                                   <children>
+                                                      <Region fx:id="bar30" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="140.0" styleClass="progress-bar-fill" />
+                                                      <Label fx:id="cost3" text="Label" textFill="WHITE">
+                                                         <StackPane.margin>
+                                                            <Insets left="8.0" />
+                                                         </StackPane.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="8.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox layoutX="30.0" layoutY="128.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="160.0" styleClass="progress-bar-container">
+                                             <children>
+                                                <StackPane alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="160.0" styleClass="progress-bar-bg">
+                                                   <children>
+                                                      <Region fx:id="bar40" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="160.0" styleClass="progress-bar-fill" />
+                                                      <Label fx:id="cost4" text="Label" textFill="WHITE">
+                                                         <StackPane.margin>
+                                                            <Insets left="8.0" />
+                                                         </StackPane.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="8.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="200.0">
+                                             <children>
+                                                <Label styleClass="total-expense" text="Total: " />
+                                                <Label fx:id="total_otherCostLabel" styleClass="total-expense" text="Label" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="8.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="32.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <VBox fx:id="order_page" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="530.0" prefWidth="770.0" styleClass="order-pane" visible="false">
+               <children>
+                  <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0" styleClass="title-pane">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Orders">
+                           <font>
+                              <Font name="Calibri" size="28.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="16.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Region maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="455.0" />
+                        <Pane fx:id="search_bar1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" styleClass="search_bar">
+                           <children>
+                              <TextField fx:id="serach_field1" layoutX="14.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" promptText="search" styleClass="search_field" />
+                              <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="163.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" styleClass="search_icon">
+                                 <image>
+                                    <Image url="@../images/Logo/search.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="16.0" />
+                           </HBox.margin>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="120.0" prefWidth="770.0">
+                     <children>
+                        <HBox fx:id="odrer_box" alignment="CENTER_LEFT" layoutX="395.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="220.0" styleClass="boxes">
+                           <children>
+                              <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="logo-background-order">
+                                 <HBox.margin>
+                                    <Insets left="16.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0" prefWidth="120.0">
+                                 <children>
+                                    <Label fx:id="totalOrderLabel" text="50">
+                                       <VBox.margin>
+                                          <Insets left="12.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Text fill="#6e6e6e" strokeType="OUTSIDE" strokeWidth="0.0" text="Orders">
+                                       <VBox.margin>
+                                          <Insets left="12.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="16.0" right="36.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox fx:id="pending_box" alignment="CENTER_LEFT" layoutX="275.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="220.0" styleClass="boxes">
+                           <children>
+                              <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="logo-background-pending">
+                                 <HBox.margin>
+                                    <Insets left="16.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0" prefWidth="120.0">
+                                 <children>
+                                    <Label fx:id="totalOrderPendingLabel" text="24">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="12.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Text fill="#6e6e6e" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Pending">
+                                       <VBox.margin>
+                                          <Insets left="12.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="36.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox fx:id="dispactch_box" alignment="CENTER_LEFT" layoutX="415.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="220.0" styleClass="boxes">
+                           <children>
+                              <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="logo-background-dispatch">
+                                 <HBox.margin>
+                                    <Insets left="16.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0" prefWidth="120.0">
+                                 <children>
+                                    <Label fx:id="totalOrderDispatchedLabel" text="30">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="12.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Text fill="#6e6e6e" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Dispatch">
+                                       <VBox.margin>
+                                          <Insets left="12.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="All Orders">
+                           <font>
+                              <Font name="Calibri" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="16.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Region maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="520.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <TableView fx:id="orderTable" maxWidth="-Infinity" prefHeight="271.0" prefWidth="738.0" styleClass="order-table">
+                    <columns>
+                      <TableColumn fx:id="orderId_col" maxWidth="50.0" minWidth="50.0" prefWidth="56.000059485435486" text="Id" />
+                      <TableColumn fx:id="customerName_col" prefWidth="164.0" text="Name" />
+                        <TableColumn fx:id="orderDate_col" prefWidth="113.0" text="Date" />
+                        <TableColumn fx:id="totalAmount_col" prefWidth="125.0" text="Total" />
+                        <TableColumn fx:id="paymentMethod_col" prefWidth="86.0" text="Payment " />
+                        <TableColumn fx:id="address_col2" prefWidth="99.0" text="Address" />
+                        <TableColumn fx:id="order_status_col" prefWidth="83.199951171875" text="Status" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets left="16.0" right="16.0" />
+                     </VBox.margin>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox fx:id="employee_page" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+               <children>
+                  <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0" styleClass="title-pane">
+                     <children>
+                        <Text fill="#fafafa" strokeType="OUTSIDE" strokeWidth="0.0" text="Employees">
+                           <font>
+                              <Font name="Calibri" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="16.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Region maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="410.0" />
+                        <Pane fx:id="search_bar11" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" styleClass="search_bar">
+                           <children>
+                              <TextField fx:id="serach_field11" layoutX="14.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" promptText="search" styleClass="search_field" />
+                              <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="163.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" styleClass="search_icon">
+                                 <image>
+                                    <Image url="@../images/Logo/search.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="32.0" />
+                           </HBox.margin>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="470.0" prefWidth="770.0">
+                     <children>
+                        <VBox fx:id="employee_table_page" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="470.0" prefWidth="770.0">
+                           <children>
+                              <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="170.0" prefWidth="770.0">
+                                 <children>
+                                    <HBox fx:id="employee_box" alignment="CENTER_LEFT" layoutX="395.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="120.0" prefWidth="200.0" styleClass="employee-boxes">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0" prefWidth="120.0">
+                                             <children>
+                                                <Text fill="#333333" strokeType="OUTSIDE" strokeWidth="0.0" text="Total">
+                                                   <VBox.margin>
+                                                      <Insets left="12.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fill="#333333" strokeType="OUTSIDE" strokeWidth="0.0" text="Employees" wrappingWidth="100.478515625">
+                                                   <VBox.margin>
+                                                      <Insets left="12.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Line endX="32.0" stroke="#6b97eb" strokeWidth="3.0">
+                                                   <VBox.margin>
+                                                      <Insets left="12.0" top="4.0" />
+                                                   </VBox.margin>
+                                                </Line>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <Label fx:id="totalEmployee_label" text="Label">
+                                             <font>
+                                                <Font name="System Bold" size="28.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="40.0" />
+                                       </HBox.margin>
+                                    </HBox>
+                                    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="372.0" styleClass="card-form" stylesheets="@../css/style.css">
+                                       <children>
+                                          <AnchorPane layoutX="14.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="75.0" styleClass="image-card" stylesheets="@../css/style.css">
+                                             <children>
+                                                <ImageView fx:id="profile_image" fitHeight="100.0" fitWidth="75.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                                             </children>
+                                          </AnchorPane>
+                                          <Label layoutX="123.0" layoutY="95.0" text="Name:" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="123.0" layoutY="44.0" text="D.O.B:" AnchorPane.topAnchor="32.0">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="123.0" layoutY="80.0" text="Phone:" AnchorPane.topAnchor="52.0">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="123.0" layoutY="110.0" text="Email:" AnchorPane.topAnchor="72.0">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="take_nameLabel" layoutX="186.0" layoutY="95.0" text="Label" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="20.0" />
+                                             </font></Label>
+                                          <Label fx:id="take_dobLabel" layoutX="172.0" layoutY="50.0" text="Label" AnchorPane.topAnchor="32.0" />
+                                          <Label fx:id="take_phoneLabel" layoutX="172.0" layoutY="87.0" text="Label" AnchorPane.topAnchor="52.0" />
+                                          <Label fx:id="take_emailLabel" layoutX="172.0" layoutY="122.0" text="Label" AnchorPane.topAnchor="72.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Status">
+                                       <font>
+                                          <Font name="Calibri Bold" size="24.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="16.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Region maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="47.0" prefWidth="600.0" />
+                                    <Button fx:id="employee_pay_button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#showPaymentPage" prefHeight="30.0" prefWidth="80.0" styleClass="employee-pay-button" text="Pay" textAlignment="CENTER">
+                                       <HBox.margin>
+                                          <Insets bottom="8.0" right="32.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="employee_table" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#selectEmployee" prefHeight="240.0" prefWidth="722.0" styleClass="order-table">
+                                 <columns>
+                                    <TableColumn fx:id="id_col" maxWidth="60.0" minWidth="60.0" prefWidth="56.000059485435486" text="Id" />
+                                    <TableColumn fx:id="name_col" maxWidth="230.0" minWidth="156.66661071777344" prefWidth="165.3332977294922" text="Name" />
+                                    <TableColumn fx:id="dob_col" maxWidth="240.0" minWidth="126.66665649414062" prefWidth="164.00003051757812" text="D.O.B" />
+                                    <TableColumn fx:id="address_col" maxWidth="257.3333740234375" minWidth="120.0" prefWidth="236.66656494140625" text="Address" />
+                                    <TableColumn fx:id="salary_col" maxWidth="212.0" minWidth="120.0" prefWidth="141.3333740234375" text="Salary" />
+                                    <TableColumn fx:id="status_col" maxWidth="212.0" minWidth="120.0" prefWidth="141.3333740234375" text="Status" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <VBox.margin>
+                                    <Insets left="16.0" right="32.0" />
+                                 </VBox.margin>
+                              </TableView>
+                              <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="770.0">
+                                 <children>
+                                    <Button fx:id="e_remove" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#removeEmployee" prefHeight="30.0" prefWidth="80.0" styleClass="employee-remove-button" text="Remove" textAlignment="CENTER">
+                                       <HBox.margin>
+                                          <Insets bottom="8.0" right="8.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="e_add" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showAddEmployeePage" prefHeight="30.0" prefWidth="80.0" styleClass="employee-add-button" text="Add">
+                                       <HBox.margin>
+                                          <Insets bottom="8.0" right="32.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="employee_add_page" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="770.0" stylesheets="@../css/add.css" visible="false">
+                           <children>
+                              <HBox layoutX="10.0" layoutY="218.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="770.0" />
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="770.0" stylesheets="@../css/add.css">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add new employee">
+                                       <HBox.margin>
+                                          <Insets left="54.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                       <HBox.margin>
+                                          <Insets left="76.0" right="16.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Id">
+                                             <VBox.margin>
+                                                <Insets bottom="4.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="add_employee_id" promptText="e.g: 1" styleClass="text_field" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                       <children>
+                                          <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                                             <VBox.margin>
+                                                <Insets bottom="4.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="add_employee_name" promptText="e.g: LeBonbon" styleClass="text_field" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="16.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="16.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" layoutX="202.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                       <children>
+                                          <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="D.O.B">
+                                             <VBox.margin>
+                                                <Insets bottom="4.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="add_employee_dob" promptText="yy-mm-dd" styleClass="text_field" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="76.0" right="16.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" layoutX="362.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                       <children>
+                                          <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
+                                             <VBox.margin>
+                                                <Insets bottom="4.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="add_employee_address" promptText="e.g: 1 Dai Co Viet" styleClass="text_field" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="16.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                       <children>
+                                          <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile's Image">
+                                             <VBox.margin>
+                                                <Insets bottom="4.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="280.0" styleClass="image-add">
+                                             <children>
+                                                <TextField fx:id="add_employee_image" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="20.0" prefWidth="255.0" promptText="insert link" styleClass="transparent" />
+                                                <Button fx:id="toy_image_link_button1" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="+">
+                                                   <styleClass>
+                                                      <String fx:value="transparent" />
+                                                      <String fx:value="img-add-button" />
+                                                   </styleClass>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="76.0" right="16.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                       <children>
+                                          <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Salary (USD)">
+                                             <VBox.margin>
+                                                <Insets bottom="4.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="add_employee_salary" promptText="e.g: 50.00" styleClass="text_field" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="16.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="240.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                                 <children>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <HBox.margin>
+                                                <Insets left="76.0" right="16.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_employee_number" promptText="e.g: 1" styleClass="text_field" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_employee_email" promptText="e.g: LeBonbon" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children></HBox>
+                              <HBox layoutX="10.0" layoutY="272.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="770.0" />
+                              <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0" prefWidth="770.0">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <Button fx:id="confirm_add_employee_btn" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#addNewEmployee" prefHeight="35.0" prefWidth="80.0" styleClass="add-button" text="Add">
+                                       <HBox.margin>
+                                          <Insets right="8.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="close_addwindow_employee_btn" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#closeAddWindow" prefHeight="35.0" prefWidth="80.0" styleClass="close-button" text="Close">
+                                       <HBox.margin>
+                                          <Insets right="48.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="employees_payment_table_page" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="470.0" prefWidth="770.0" visible="false">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="770.0" />
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Employees payment">
+                                       <font>
+                                          <Font name="Calibri" size="24.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="54.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Region maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="58.0" prefWidth="440.0" />
+                                    <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="60.0" styleClass="employee-back-button">
+                                       <children>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/Logo/back.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="employee_back_button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backToEmployeePage" prefHeight="24.0" prefWidth="44.0" styleClass="employee-back-button" text="Back">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="32.0" />
+                                       </HBox.margin>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="employee_table1" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#selectEmployee" prefHeight="340.0" prefWidth="680.0" styleClass="order-table">
+                                 <columns>
+                                    <TableColumn fx:id="id_pay_col" maxWidth="60.0" minWidth="80.0" prefWidth="60.0" text="Id" />
+                                    <TableColumn fx:id="name_pay_col" maxWidth="360.0" minWidth="360.0" prefWidth="360.0" text="Name" />
+                                    <TableColumn fx:id="salary_pay_col" maxWidth="236.0" minWidth="236.0" prefWidth="236.0" text="Salary" />
+                                 </columns>
+                                 <VBox.margin>
+                                    <Insets left="54.0" right="32.0" />
+                                 </VBox.margin>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="770.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="240.0">
+                                       <HBox.margin>
+                                          <Insets bottom="8.0" right="16.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <Label styleClass="label-payment" text="Total payment:" />
+                                          <Label fx:id="total_paymentLabel" styleClass="label-payment" text="total">
+                                             <HBox.margin>
+                                                <Insets left="12.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <Button fx:id="payment_button_employee" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#paySalary" prefHeight="30.0" prefWidth="80.0" styleClass="employee-payment-button" text="Pay">
+                                       <HBox.margin>
+                                          <Insets bottom="8.0" right="32.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+            <VBox fx:id="storage_page" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="530.0" prefWidth="770.0" visible="false">
+               <children>
+                  <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0" styleClass="title-pane">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Storage">
+                           <font>
+                              <Font name="Calibri" size="28.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="16.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Region maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="441.0" />
+                        <Pane fx:id="search_bar111" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" styleClass="search_bar">
+                           <children>
+                              <TextField fx:id="serach_field111" layoutX="14.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" promptText="search" styleClass="search_field" />
+                              <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="163.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" styleClass="search_icon">
+                                 <image>
+                                    <Image url="@../images/Logo/search.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="16.0" />
+                           </HBox.margin>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="460.0" prefWidth="770.0">
+                     <children>
+                        <StackPane fx:id="storage_table" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="460.0" prefWidth="770.0">
+                           <children>
+                              <VBox fx:id="storage_table_view" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="460.0" prefWidth="770.0">
+                                 <children>
+                                    <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="770.0">
+                                       <children>
+                                          <TableView fx:id="books_table_storage" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="770.0" styleClass="storage-table">
+                                             <columns>
+                                                <TableColumn fx:id="bookId_storage_col" prefWidth="75.0" text="Id" />
+                                                <TableColumn fx:id="bookIsbn_storage_col" prefWidth="75.0" text="Isbn" />
+                                                <TableColumn fx:id="bookName_storage_col" prefWidth="75.0" text="Name" />
+                                                <TableColumn fx:id="bookAuthor_storage_col" prefWidth="75.0" text="Author" />
+                                                <TableColumn fx:id="bookPublisher_storage_col" prefWidth="75.0" text="Publisher" />
+                                                <TableColumn fx:id="bookPurchasePrice_storage_col" prefWidth="75.0" text="Purchase Price" />
+                                                <TableColumn fx:id="bookSellingPrice_storage_col" prefWidth="75.0" text="Selling Price" />
+                                                <TableColumn fx:id="bookQuantity_storage_col" prefWidth="75.0" text="Quantity" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                          <TableView fx:id="toys_table_storage" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="770.0" styleClass="storage-table" visible="false">
+                                             <columns>
+                                                <TableColumn fx:id="toyId_storage_col" maxWidth="80.0" minWidth="58.6666259765625" prefWidth="58.6666259765625" text="Id" />
+                                                <TableColumn fx:id="toyName_storage_col" prefWidth="112.66667175292969" text="Name" />
+                                                <TableColumn fx:id="toyBrand_storage_col" prefWidth="75.0" text="Brand" />
+                                                <TableColumn fx:id="toyType_storage_col" prefWidth="75.0" text="Type" />
+                                                <TableColumn fx:id="toySuitableAge_storage_col" prefWidth="75.0" text="Suitable Age" />
+                                                <TableColumn fx:id="toyPurchasePrice_storage_col" maxWidth="120.0" minWidth="120.0" prefWidth="75.0" text="Purchase Price" />
+                                                <TableColumn fx:id="toySellingPrice_storage_col" maxWidth="120.0" minWidth="120.0" prefWidth="75.0" text="Selling Price" />
+                                                <TableColumn fx:id="toyQuantity_storage_col" maxWidth="80.0" minWidth="80.0" prefWidth="75.0" text="Quantity" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                          <TableView fx:id="stationaries_table_storage" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="770.0" styleClass="storage-table" visible="false">
+                                             <columns>
+                                                <TableColumn fx:id="stationeryId_storage_col" maxWidth="80.0" minWidth="80.0" prefWidth="75.0" text="Id" />
+                                                <TableColumn fx:id="stationeryName_storage_col" maxWidth="160.0" minWidth="160.0" prefWidth="75.0" text="Name" />
+                                                <TableColumn fx:id="stationeryBrand_storage_col" maxWidth="120.0" minWidth="120.0" prefWidth="75.0" text="Brand" />
+                                                <TableColumn fx:id="stationeryType_storage_col" prefWidth="75.0" text="Type" />
+                                                <TableColumn fx:id="stationeryPruchasePrice_storage_col" maxWidth="120.0" prefWidth="75.0" text="Purchase Price" />
+                                                <TableColumn fx:id="stationerySeliingPrice_storage_col" maxWidth="120.0" minWidth="120.0" prefWidth="75.0" text="Selling Price" />
+                                                <TableColumn fx:id="stationeryQuantity_storage_col" maxWidth="80.0" minWidth="80.0" prefWidth="75.0" text="Quantity" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                       <padding>
+                                          <Insets top="16.0" />
+                                       </padding>
+                                    </StackPane>
+                                    <HBox fx:id="function_under_storage" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="20.0" prefWidth="770.0">
+                                       <children>
+                                          <Button fx:id="books_table_button" mnemonicParsing="false" onAction="#showStoragePage" styleClass="table-change-button" text="Books" />
+                                          <Button fx:id="toys_table_button" mnemonicParsing="false" onAction="#showStoragePage" styleClass="table-change-button" text="Toys" />
+                                          <Button fx:id="stationaries_table_button" mnemonicParsing="false" onAction="#showStoragePage" styleClass="table-change-button" text="Stationaries" />
+                                          <HBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="582.0">
+                                             <children>
+                                                <Button fx:id="remove_storage_button" mnemonicParsing="false" onAction="#removeSelectedItem" styleClass="order-button-remove" text="Remove">
+                                                   <HBox.margin>
+                                                      <Insets right="8.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <ComboBox fx:id="add_storage_button" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#addStorage" prefHeight="20.0" prefWidth="80.0" promptText="Add..." styleClass="storage-add-button" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets top="8.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="720.0" stylesheets="@../css/add.css" visible="false">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="720.0" stylesheets="@../css/add.css">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Toys">
+                                             <HBox.margin>
+                                                <Insets left="54.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#8a8a8ab3" strokeType="OUTSIDE" strokeWidth="0.0" text="add new product">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="28.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="32.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="720.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <HBox.margin>
+                                                <Insets left="76.0" right="16.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Id">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_toy_id" promptText="e.g: 1" styleClass="text_field" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_toy_name" promptText="e.g: Ninjago" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="16.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="720.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" layoutX="202.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Brand">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_toy_brand" promptText="e,g: LEGO" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="76.0" right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" layoutX="362.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Type">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_toy_type" promptText="e.g: Building Blocks" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="720.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <HBox.margin>
+                                                <Insets left="76.0" right="16.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Suitable Age">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_toy_suitable_age" promptText="e.g: 6+" styleClass="text_field" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_toy_quantity" promptText="e.g: 50" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="218.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="720.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Toy's Image">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="280.0" styleClass="image-add">
+                                                   <children>
+                                                      <TextField fx:id="add_toy_image" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="20.0" prefWidth="255.0" promptText="insert link" styleClass="transparent" />
+                                                      <Button fx:id="toy_image_link_button" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="+">
+                                                         <styleClass>
+                                                            <String fx:value="transparent" />
+                                                            <String fx:value="img-add-button" />
+                                                         </styleClass>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="76.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="240.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="720.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" layoutX="202.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Selling Price">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_toy_selling_price" promptText="e.g: 29.99" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="76.0" right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Purchase Price">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_toy_purchase_price" promptText="e.g: 20.00" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="720.0">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <children>
+                                          <Button fx:id="add_toy_button" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" styleClass="add-button" text="Add">
+                                             <HBox.margin>
+                                                <Insets right="8.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="toy_close_button" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" styleClass="close-button" text="Close" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="storage_add" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="460.0" prefWidth="770.0" visible="false">
+                           <children>
+                              <VBox fx:id="toys_add_storage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="770.0" stylesheets="@../css/add.css" visible="false">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="770.0" stylesheets="@../css/add.css">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Toys">
+                                             <HBox.margin>
+                                                <Insets left="16.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#8a8a8ab3" strokeType="OUTSIDE" strokeWidth="0.0" text="add new product">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="28.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <HBox.margin>
+                                                <Insets left="76.0" right="16.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Id">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_toy_id" promptText="e.g: 1" styleClass="text_field" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_toy_name" promptText="e.g: Ninjago" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="16.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" layoutX="202.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Brand">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_toy_brand" promptText="e,g: LEGO" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="76.0" right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" layoutX="362.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Type">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_toy_type" promptText="e.g: Building Blocks" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <HBox.margin>
+                                                <Insets left="76.0" right="16.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Suitable Age">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_toy_suitable_age" promptText="e.g: 6+" styleClass="text_field" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_toy_quantity" promptText="e.g: 50" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="218.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Toy's Image">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="280.0" styleClass="image-add">
+                                                   <children>
+                                                      <TextField fx:id="add_toy_image" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="20.0" prefWidth="255.0" promptText="insert link" styleClass="transparent" />
+                                                      <Button fx:id="toy_image_link_button" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="+">
+                                                         <styleClass>
+                                                            <String fx:value="transparent" />
+                                                            <String fx:value="img-add-button" />
+                                                         </styleClass>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="76.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="240.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" layoutX="202.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Selling Price">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_toy_selling_price" promptText="e.g: 29.99" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="76.0" right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Purchase Price">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_toy_purchase_price" promptText="e.g: 20.00" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0" prefWidth="770.0">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <children>
+                                          <Button fx:id="add_toy_button" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#addNewToy" prefHeight="35.0" prefWidth="80.0" styleClass="add-button" text="Add">
+                                             <HBox.margin>
+                                                <Insets right="8.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="toy_close_button" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#closeAddWindow" prefHeight="35.0" prefWidth="80.0" styleClass="close-button" text="Close">
+                                             <HBox.margin>
+                                                <Insets right="48.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="books_add_storage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="770.0" stylesheets="@../css/add.css">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="720.0" stylesheets="@../css/add.css">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Books">
+                                             <HBox.margin>
+                                                <Insets left="16.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#8a8a8ab3" strokeType="OUTSIDE" strokeWidth="0.0" text="add new product">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="28.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <HBox.margin>
+                                                <Insets left="76.0" right="16.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Id">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_book_id" promptText="e.g: 1" styleClass="text_field" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Isbn">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_book_isbn" promptText="e.g: 0439023483" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="16.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" layoutX="202.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_book_name" promptText="e,g: Harry Potter" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="76.0" right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" layoutX="362.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Author">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_book_author" promptText="e.g: J.K.Rowling" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <HBox.margin>
+                                                <Insets left="76.0" right="16.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Publisher">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_book_publisher" promptText="e.g: Kim Đồng" styleClass="text_field" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_book_quantity" promptText="e.g: 50" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="218.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <HBox.margin>
+                                                <Insets left="76.0" right="16.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Cover">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="280.0" styleClass="image-add">
+                                                   <children>
+                                                      <TextField fx:id="add_book_cover" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="20.0" prefWidth="255.0" promptText="insert link" styleClass="transparent" />
+                                                      <Button fx:id="book_image_link_button" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="+">
+                                                         <styleClass>
+                                                            <String fx:value="transparent" />
+                                                            <String fx:value="img-add-button" />
+                                                         </styleClass>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_book_genre" promptText="e.g: Romance" styleClass="text_field" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="240.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" layoutX="202.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Selling Price (USD)">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_book_selling_price" promptText="e.g: 29.99" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="76.0" right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Purchase Price (USD)">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_book_purchase_price" promptText="e.g: 20.00" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0" prefWidth="770.0">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <children>
+                                          <Button fx:id="add_book_button" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#addNewBook" prefHeight="35.0" prefWidth="80.0" styleClass="add-button" text="Add">
+                                             <HBox.margin>
+                                                <Insets right="8.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="book_close_button" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#closeAddWindow" prefHeight="35.0" prefWidth="80.0" styleClass="close-button" text="Close">
+                                             <HBox.margin>
+                                                <Insets right="48.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="stationery_add_storage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="770.0" stylesheets="@../css/add.css" visible="false">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="720.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stationaries">
+                                             <HBox.margin>
+                                                <Insets left="16.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#8a8a8ab3" strokeType="OUTSIDE" strokeWidth="0.0" text="add new product">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="28.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0" prefWidth="770.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <HBox.margin>
+                                                <Insets left="76.0" right="24.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Id">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_stationery_id" promptText="e.g: 1" styleClass="text_field" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_stationery_name" promptText="e.g: Ninjago" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="16.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0" prefWidth="770.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" layoutX="202.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Brand">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_stationery_brand" promptText="e,g: LEGO" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="76.0" right="24.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" layoutX="362.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Type">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_stationery_type" promptText="e.g: Building Blocks" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0" prefWidth="770.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Product's Image">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="280.0" styleClass="image-add">
+                                                   <children>
+                                                      <TextField fx:id="add_stationary_image" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="20.0" prefWidth="255.0" promptText="insert link" styleClass="transparent" />
+                                                      <Button fx:id="stationery_image_link_button" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="+">
+                                                         <styleClass>
+                                                            <String fx:value="transparent" />
+                                                            <String fx:value="img-add-button" />
+                                                         </styleClass>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="76.0" right="24.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_stationery_quantity" promptText="e.g: 50" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="240.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0" prefWidth="770.0">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" layoutX="202.0" layoutY="10.0" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Selling Price">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_stationery_selling_price" promptText="e.g: 29.99" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="76.0" right="24.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="280.0">
+                                             <children>
+                                                <Text fill="#7e7e7e" strokeType="OUTSIDE" strokeWidth="0.0" text="Purchase Price">
+                                                   <VBox.margin>
+                                                      <Insets bottom="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="add_stationery_purchase_price" promptText="e.g: 20.00" styleClass="text_field" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <children>
+                                          <Button fx:id="add_stationary_button" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#addNewStationery" prefHeight="35.0" prefWidth="80.0" styleClass="add-button" text="Add">
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="stationary_close_button" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#closeAddWindow" prefHeight="35.0" prefWidth="80.0" styleClass="close-button" text="Close">
+                                             <HBox.margin>
+                                                <Insets right="40.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+            <VBox fx:id="setting_page" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" visible="false">
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="770.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="770.0" styleClass="title-pane">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+                                 <font>
+                                    <Font name="Calibri" size="24.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="16.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Region maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="456.0" />
+                              <Pane fx:id="search_bar1121" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" styleClass="search_bar">
+                                 <children>
+                                    <TextField fx:id="serach_field1121" layoutX="14.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" promptText="search" styleClass="search_field" />
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="163.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" styleClass="search_icon">
+                                       <image>
+                                          <Image url="@../images/Logo/search.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets right="16.0" />
+                                 </HBox.margin>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="332.0" prefWidth="770.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="770.0">
+                           <children>
+                              <Label prefHeight="35.0" prefWidth="140.0" styleClass="setting-title" text="Your Profile">
+                                 <HBox.margin>
+                                    <Insets left="16.0" right="40.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Line endX="552.0" startX="18.0" stroke="#ffffff87" strokeWidth="0.5">
+                                 <HBox.margin>
+                                    <Insets right="32.0" />
+                                 </HBox.margin>
+                              </Line>
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="280.0" prefWidth="722.0">
+                           <VBox.margin>
+                              <Insets left="16.0" right="32.0" />
+                           </VBox.margin>
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="280.0" prefWidth="200.0" styleClass="profile-card">
+                                 <children>
+                                    <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="60.0" styleClass="profile-image-wrapper">
+                                       <children>
+                                          <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="60.0" styleClass="profile-image-edit-bg">
+                                             <children>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="15.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" styleClass="profile-image-edit-icon">
+                                                   <image>
+                                                      <Image url="@../images/Logo/edit-text.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </StackPane>
+                                    <Label fx:id="user_name_settings" styleClass="user-name" text="Name" />
+                                    <Label fx:id="user_position_setting" layoutX="65.0" layoutY="188.0" styleClass="user-position" text="Position" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="16.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="500.0" styleClass="profile-card">
+                                 <children>
+                                    <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="500.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="User profile">
+                                             <VBox.margin>
+                                                <Insets left="16.0" top="16.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="522.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="120.0">
+                                                   <children>
+                                                      <Label styleClass="profile-title-label" text="Gender:">
+                                                         <HBox.margin>
+                                                            <Insets left="16.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label text="Label">
+                                                         <HBox.margin>
+                                                            <Insets left="16.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets right="16.0" />
+                                                   </HBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="120.0">
+                                                   <children>
+                                                      <Label styleClass="profile-title-label" text="D.O.B:">
+                                                         <HBox.margin>
+                                                            <Insets left="16.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label text="Label">
+                                                         <HBox.margin>
+                                                            <Insets left="16.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets right="16.0" />
+                                                   </HBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="170.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="220.0">
+                                                   <children>
+                                                      <Label styleClass="profile-title-label" text="Phone number:">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label text="Label">
+                                                         <HBox.margin>
+                                                            <Insets left="16.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets right="16.0" />
+                                                   </HBox.margin>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="500.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Profile settings">
+                                             <VBox.margin>
+                                                <Insets left="16.0" top="16.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="500.0">
+                                             <children>
+                                                <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="240.0">
+                                                   <children>
+                                                      <Label styleClass="profile-title-label" text="First name">
+                                                         <VBox.margin>
+                                                            <Insets left="16.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="200.0" styleClass="profile-edit-field">
+                                                         <VBox.margin>
+                                                            <Insets left="16.0" top="2.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets right="16.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="240.0">
+                                                   <children>
+                                                      <Label styleClass="profile-title-label" text="Last name">
+                                                         <VBox.margin>
+                                                            <Insets left="16.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="200.0" styleClass="profile-edit-field">
+                                                         <VBox.margin>
+                                                            <Insets left="16.0" top="2.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="48.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="522.0">
+                                             <children>
+                                                <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="240.0">
+                                                   <children>
+                                                      <Label styleClass="profile-title-label" text="D.O.B">
+                                                         <VBox.margin>
+                                                            <Insets left="16.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="200.0" styleClass="profile-edit-field">
+                                                         <VBox.margin>
+                                                            <Insets left="16.0" top="2.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets right="16.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="240.0">
+                                                   <children>
+                                                      <Label styleClass="profile-title-label" text="Phone number">
+                                                         <VBox.margin>
+                                                            <Insets left="16.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="200.0" styleClass="profile-edit-field">
+                                                         <VBox.margin>
+                                                            <Insets left="16.0" top="2.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

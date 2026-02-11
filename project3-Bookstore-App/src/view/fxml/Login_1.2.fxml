@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" styleClass="root" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Login_12_Controller">
+   <children>
+      <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="805.0" stylesheets="@../css/style.css">
+         <children>
+            <Pane fx:id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" styleClass="login_pane" HBox.hgrow="NEVER">
+               <children>
+                  <Text fx:id="loginText" fill="#3e70fa" layoutX="166.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="login_text" text="Login">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <HBox fx:id="username_field" alignment="CENTER" layoutX="67.0" layoutY="140.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="250.0" styleClass="text-field-pane">
+                     <children>
+                        <TextField fx:id="usernameField" prefHeight="30.0" prefWidth="215.0" promptText="Username" styleClass="text-field" />
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" styleClass="icon_image-view">
+                           <image>
+                              <Image url="@../images/Logo/user.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="password_field" alignment="CENTER" layoutX="67.0" layoutY="185.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="250.0" styleClass="password-field-pane">
+                     <children>
+                        <PasswordField fx:id="passwordField" prefHeight="30.0" prefWidth="215.0" promptText="Password" styleClass="password-field" />
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" styleClass="icon_image-view">
+                           <image>
+                              <Image url="@../images/Logo/lock.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Button fx:id="loginButton" layoutX="68.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleLoginBtnAction" prefHeight="30.0" prefWidth="100.0" styleClass="login_button" text="Login" />
+                  <Hyperlink fx:id="forgotPass" layoutX="231.0" layoutY="221.0" prefHeight="20.0" prefWidth="90.0" text="Forgot password?" textAlignment="RIGHT" textFill="#4362f9">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Hyperlink>
+                  <Button fx:id="signupButton" layoutX="181.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleMove" prefHeight="30.0" prefWidth="100.0" styleClass="sign_up_button" text="Sign up" />
+               </children>
+            </Pane>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" stylesheets="@../css/style.css">
+               <children>
+                  <Pane fx:id="loginPane1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" styleClass="login_pane">
+                     <children>
+                        <Text fx:id="signupText" fill="#052675" layoutX="159.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="signup_text" text="Signup" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Hyperlink fx:id="Terms_and_Condition" layoutX="215.0" layoutY="265.0" prefHeight="20.0" prefWidth="110.0" text="Terms and conditions" textAlignment="RIGHT" textFill="#4362f9">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Hyperlink>
+                        <Button fx:id="registerButton" layoutX="67.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleRegisterBtnAction" prefHeight="30.0" prefWidth="250.0" styleClass="register_button" text="Register" />
+                        <HBox alignment="CENTER" layoutX="67.0" layoutY="185.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="250.0" styleClass="signup_user_field">
+                           <children>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" styleClass="icon_image-view">
+                                 <image>
+                                    <Image url="@../images/Logo/signup_user.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="usernameRegField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="29.0" prefWidth="200.0" promptText="Username" styleClass="signup_user">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="67.0" layoutY="230.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="250.0" styleClass="signup_pass_field">
+                           <children>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" styleClass="icon_image-view">
+                                 <image>
+                                    <Image url="@../images/Logo/padlock.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <PasswordField fx:id="passRegField" prefHeight="30.0" prefWidth="200.0" promptText="Password" styleClass="signup_pass">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </PasswordField>
+                              <StackPane prefHeight="20.0" prefWidth="20.0">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <ImageView fx:id="viewEye" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" styleClass="icon_image-view" visible="true">
+                                       <image>
+                                          <Image url="@../images/Logo/view.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="hiddenEye" fitHeight="15.0" fitWidth="15.0" opacity="0.0" pickOnBounds="true" preserveRatio="true" styleClass="icon_image-view" visible="false">
+                                       <image>
+                                          <Image url="@../images/Logo/hidden.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="116.0" layoutY="328.0">
+                           <children>
+                              <Text fill="#052675" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="slogin" mnemonicParsing="false" onAction="#handleMove" styleClass="slogin_button" text="Login" textFill="#052675">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="66.0" layoutY="140.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="250.0" styleClass="signup_user_field">
+                           <children>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" styleClass="icon_image-view">
+                                 <image>
+                                    <Image url="@../images/Logo/signup_user.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="nameRegField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="29.0" prefWidth="200.0" promptText="Fullname" styleClass="signup_user">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneCover" prefHeight="400.0" prefWidth="400.0" styleClass="pane_cover" stylesheets="@../css/style.css">
+                     <children>
+                        <ImageView fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" styleClass="pane_cover">
+                           <image>
+                              <Image url="@../images/Logo/blue.png" />
+                           </image>
+                        </ImageView>
+                        <VBox fx:id="coverPane" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" styleClass="pane_cover">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="check_box" text="Welcome back" textAlignment="CENTER" wrappingWidth="341.30891494750904">
+                                 <font>
+                                    <Font name="Calibri Bold" size="50.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+   </children>
+</StackPane>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/StyleTungDZ.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookInformationController">
+   <children>
+      <ImageView fx:id="bookImage" fitHeight="290.0" fitWidth="205.0" layoutX="45.0" layoutY="68.0" pickOnBounds="true" styleClass="fixed-image-information">
+         <image>
+            <Image url="@../images/Books/demenphieuluuky.jpg" />
+         </image>
+      </ImageView>
+      <VBox layoutX="274.0" layoutY="65.0" prefHeight="185.0" prefWidth="293.0">
+         <children>
+            <HBox prefHeight="66.0" prefWidth="293.0">
+               <children>
+                  <Label fx:id="bookName" alignment="TOP_LEFT" contentDisplay="TOP" prefHeight="63.0" prefWidth="293.0" text="Dế mèn phiêu lưu ký" wrapText="true">
+                     <font>
+                        <Font name="Calibri Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="293.0">
+               <children>
+                  <Label prefHeight="22.0" prefWidth="98.0" text="Author:">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="bookAuthor" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="22.0" prefWidth="228.0" text="Tô Hoài">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="32.0" prefHeight="31.0" prefWidth="293.0">
+               <children>
+                  <Label prefHeight="22.0" prefWidth="95.0" text="Publisher:">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="bookPublisher" alignment="CENTER_RIGHT" prefHeight="22.0" prefWidth="231.0" text="Kim Đồng">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="54.0" prefHeight="32.0" prefWidth="293.0">
+               <children>
+                  <Label prefHeight="22.0" prefWidth="59.0" text="ISBN:">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="bookISBN" alignment="CENTER_RIGHT" prefHeight="22.0" prefWidth="266.0" text="001412213131231">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="76.0" prefHeight="20.0" prefWidth="293.0">
+               <children>
+                  <Label prefHeight="22.0" prefWidth="52.0" text="Price:">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="bookPrice" alignment="CENTER_RIGHT" prefHeight="22.0" prefWidth="251.0" text="\$19.99">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fitHeight="45.0" fitWidth="40.0" layoutX="35.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Button/return.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="backButton" layoutX="28.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="33.0" prefWidth="52.0" styleClass="transparent-button" stylesheets="@../css/StyleTungDZ.css" text="Button" />
+      <HBox alignment="CENTER" layoutX="444.0" layoutY="256.0" maxHeight="-Infinity" prefHeight="35.0" prefWidth="133.0" spacing="2.0" style="-fx-border-color: black; -fx-background-radius: 15; -fx-background-color: white; -fx-border-radius: 15;">
+         <children>
+            <Pane layoutX="11.0" layoutY="11.0" prefHeight="33.0" prefWidth="53.0" styleClass="button-quantity-left">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-5.0" layoutY="-12.0" onMouseClicked="#handleDecreaseButton" prefHeight="53.0" prefWidth="52.0" text="-" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="61.0" layoutY="11.0" prefHeight="33.0" prefWidth="51.0">
+               <children>
+                  <Label fx:id="quantityLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="-4.0" prefHeight="40.0" prefWidth="52.0" text="1" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="39.0" layoutY="11.0" prefHeight="33.0" prefWidth="53.0" styleClass="button-quantity-right">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="-12.0" onMouseClicked="#handleIncreaseButton" prefHeight="53.0" prefWidth="58.0" text="+" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <Pane layoutX="410.0" layoutY="315.0" prefHeight="45.0" prefWidth="168.0" style="-fx-background-radius: 20;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="6.0" onMouseClicked="#handleAddToCart" prefHeight="33.0" prefWidth="168.0" text="Add to Cart" textAlignment="CENTER" textFill="#e2e2e2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <styleClass>
+            <String fx:value="mouse-AddtoCart" />
+            <String fx:value="button-AddtoCart" />
+         </styleClass>
+      </Pane>
+      <Label layoutX="274.0" layoutY="263.0" text="Quantity:">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

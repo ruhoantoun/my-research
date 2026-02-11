@@ -1,0 +1,11 @@
+-- CUSTOMER -- 
+create table customer (
+	id int primary key auto_increment,
+    username VARCHAR(50) NOT NULL unique,
+    password varchar(50) not null, 
+    name varchar(30),
+    phonenumber varchar(20),
+    address varchar(25),
+    DOB date
+);
+

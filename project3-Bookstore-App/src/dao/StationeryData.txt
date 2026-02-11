@@ -1,0 +1,46 @@
+CREATE TABLE Stationery (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    quantity INT,
+    purchasePrice FLOAT,
+    sellingPrice FLOAT,
+    brand VARCHAR(100),
+    stationeryType VARCHAR(100),
+    ImageSrc VARCHAR(100) DEFAULT NULL
+);
+
+truncate table Stationery;
+select * from Stationery;
+
+INSERT INTO Stationery (id, name, quantity, purchasePrice, sellingPrice, brand, stationeryType, ImageSrc)
+VALUES
+(1, 'Bút bi Thiên Long', 100, 0.09, 0.19, 'Thiên Long', 'Bút viết', '/view/images/Stationery/butbithienlong.jpg'),
+(2, 'Vở ô ly Campus', 50, 0.29, 0.49, 'Campus', 'Vở viết', '/view/images/Stationery/voolycampus.jpg'),
+(3, 'Bút chì gỗ Staedtler', 70, 0.12, 0.24, 'Staedtler', 'Bút viết', '/view/images/Stationery/butchigostaedtler.jpg'),
+(4, 'Tẩy Pentel', 60, 0.16, 0.29, 'Pentel', 'Dụng cụ học tập', '/view/images/Stationery/taypentel.jpg'),
+(5, 'Thước kẻ nhựa Deli', 80, 0.20, 0.39, 'Deli', 'Dụng cụ học tập', '/view/images/Stationery/thuockenhuadeli.jpg'),
+(6, 'Kéo văn phòng', 40, 0.49, 0.72, 'Plus', 'Phụ kiện văn phòng', '/view/images/Stationery/keovanphong.jpg'),
+(7, 'Hộp bút Doremon', 30, 0.59, 0.99, 'Sanrio', 'Phụ kiện văn phòng', '/view/images/Stationery/hopbutdoremon.jpg'),
+(8, 'Bút lông dầu Artline', 90, 0.39, 0.72, 'Artline', 'Bút viết', '/view/images/Stationery/butlongdauartline.jpg'),
+(9, 'Bút xóa dạng băng', 55, 0.32, 0.56, 'Tombow', 'Bút viết', '/view/images/Stationery/butxoadangbang.jpg'),
+(10, 'Bìa hồ sơ A4', 60, 0.16, 0.29, 'Xingfa', 'Phụ kiện văn phòng', '/view/images/Stationery/biahosoa4.jpg'),
+(11, 'Giấy note màu', 45, 0.12, 0.20, 'Post-it', 'Vở viết', '/view/images/Stationery/giaynotemau.jpg'),
+(12, 'Túi clear bag', 35, 0.24, 0.44, 'Comix', 'Phụ kiện văn phòng', '/view/images/Stationery/tuiclearbag.jpg'),
+(13, 'Giấy in A4', 200, 1.59, 2.59, 'IK Plus', 'Vở viết', '/view/images/Stationery/giayina4.jpg'),
+(14, 'Máy dập ghim nhỏ', 15, 1.00, 1.59, 'KW-Trio', 'Phụ kiện văn phòng', '/view/images/Stationery/maydapghimnho.jpg'),
+(15, 'Bảng trắng mini', 20, 1.00, 1.59, 'Thiên Long', 'Dụng cụ học tập', '/view/images/Stationery/bangtrangmini.jpg'),
+(16, 'Sổ tay lò xo A6', 40, 0.49, 0.79, 'Campus', 'Vở viết', '/view/images/Stationery/sotayloxoa6.jpg'),
+(17, 'Giấy màu thủ công', 80, 0.39, 0.72, 'Deli', 'Vở viết', '/view/images/Stationery/giaymauthucong.jpg'),
+(18, 'Bút máy học sinh', 60, 0.49, 0.79, 'Thiên Long', 'Bút viết', '/view/images/Stationery/butmayhocsinh.jpg'),
+(19, 'Sổ ký tên A4', 30, 1.19, 1.79, 'Miolo', 'Vở viết', '/view/images/Stationery/sokytena4.jpg'),
+(20, 'Thước cuộn dây 3m', 20, 0.79, 1.39, 'Tajima', 'Dụng cụ học tập', '/view/images/Stationery/thuoccuonday3m.jpg'),
+(21, 'Bút dạ quang Stabilo', 90, 0.20, 0.39, 'Stabilo', 'Bút viết', '/view/images/Stationery/butdaquangstabilo.jpg'),
+(22, 'Sổ tay học từ vựng', 50, 0.36, 0.60, 'Campus', 'Vở viết', '/view/images/Stationery/sotayhoctuvung.jpg'),
+(23, 'Hộp ghim bấm', 60, 0.16, 0.29, 'Deli', 'Phụ kiện văn phòng', '/view/images/Stationery/hopghimbam.jpg'),
+(24, 'Bút lông bảng Thiên Long', 80, 0.28, 0.49, 'Thiên Long', 'Bút viết', '/view/images/Stationery/butlongbang.jpg'),
+(25, 'Bộ thước kẻ đa năng', 40, 0.52, 0.79, 'Maped', 'Dụng cụ học tập', '/view/images/Stationery/bothuockedanang.jpg'),
+(26, 'Cặp đựng tài liệu A4', 30, 0.79, 1.39, 'Comix', 'Phụ kiện văn phòng', '/view/images/Stationery/capdungtailieua4.jpg'),
+(27, 'Giấy kiểm tra các loại', 100, 0.08, 0.16, 'Campus', 'Vở viết', '/view/images/Stationery/giaykiemtra.jpg'),
+(28, 'Bút gel mực đen', 70, 0.12, 0.24, 'Pentel', 'Bút viết', '/view/images/Stationery/butgelmucden.jpg'),
+(29, 'Dao rọc giấy', 40, 0.32, 0.52, 'Deli', 'Dụng cụ học tập', '/view/images/Stationery/daorocgiay.jpg'),
+(30, 'Hộp giấy note', 35, 0.39, 0.72, '3A', 'Phụ kiện văn phòng', '/view/images/Stationery/hopgiaynote.jpg');

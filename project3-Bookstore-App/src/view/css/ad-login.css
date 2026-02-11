@@ -1,0 +1,53 @@
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Khung chứa form (bên phải) */
+.login_pane {
+    -fx-background-color: #f8f8f8;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-color: white;
+    -fx-border-style: solid;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-alignment: center;
+}
+
+/* Tiêu đề "Login" */
+.login_text {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-fill: #3e70fa;
+}
+
+.text-field, .password-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #3e70fa;
+    -fx-prompt-text-fill: #3e70fa;
+    -fx-font-size: 13px;
+    -fx-padding: 4 0 4 0;
+}
+
+.text-field-pane, .password-field-pane{
+    -fx-background-color: transparent;
+    -fx-border-color: #3e70fa;
+    -fx-border-radius: 20px;
+}
+
+/* Button Login */
+.login_button {
+    -fx-background-color: #3e70fa;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-font-size: 13px;
+}
+
+.login_button:hover {
+    -fx-background-color: #1a2ff2;
+    -fx-cursor: hand;
+}
+
+.pane-outer{
+    -fx-background-color: #3e70fa;
+}

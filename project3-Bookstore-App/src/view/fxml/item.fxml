@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="209.0" prefWidth="149.0" styleClass="White-background" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="136.0" layoutX="21.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Books/eu-luu-ki-18x25-bia-cung-tai-ban-2020_0cbc27c2213e4b18b85eec16dd9eda81_d7d948de979842b8aef1aacbc3549161_master.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="19.0" layoutY="155.0" prefHeight="39.0" prefWidth="108.0" text="Dế mèn phiêu lưu ký" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="187.0" text="50.000 đ">
+         <font>
+            <Font name="Calibri Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="39.0" fitWidth="26.0" layoutX="115.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Button/add%20(1).png" />
+         </image>
+      </ImageView>
+      <Button layoutX="116.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="17.0" styleClass="transparent-button" text="Button" />
+   </children>
+</AnchorPane>

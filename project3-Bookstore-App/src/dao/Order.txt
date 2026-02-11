@@ -1,0 +1,45 @@
+-- CUSTOMER -- 
+create table customer (
+	id int primary key auto_increment,
+    username VARCHAR(50) NOT NULL unique,
+    password varchar(50) not null, 
+    name varchar(30),
+    phonenumber varchar(20),
+    address varchar(25),
+    DOB date
+);
+select * from customer;
+drop table customer;
+
+-- ORDER --
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY AUTO_INCREMENT,
+    customer_id INT,
+    order_date DATETIME NOT NULL default current_timestamp,
+    total_amount DECIMAL(10,2) NOT NULL,
+    payment_method VARCHAR(50),
+    shipping_address TEXT,
+    status VARCHAR(20) DEFAULT 'Pending',
+    FOREIGN KEY (customer_id) REFERENCES customer(id)
+);
+
+select * from orders;
+truncate table orders;
+DELETE FROM orders;
+DELETE FROM orders;
+
+
+-- ORDER INFORMATION --
+CREATE TABLE order_items (
+    order_id INT,
+    product_id INT,
+    product_type ENUM('BOOK', 'STATIONERY', 'TOY'),
+    quantity INT NOT NULL CHECK (quantity > 0),
+    price_at_order DOUBLE NULL,
+    FOREIGN KEY (order_id) REFERENCES orders(order_id),
+    PRIMARY KEY (order_id, product_id, product_type)
+);
+
+drop table  order_items;
+select * from order_items;
+truncate table order_items;

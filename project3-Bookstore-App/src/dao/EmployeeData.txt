@@ -1,0 +1,28 @@
+USE hustbookstore;
+
+SELECT * FROM hustbookstore.employee;
+
+CREATE TABLE Employee (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    dob DATE,
+    address VARCHAR(255),
+    salary DOUBLE,
+    image VARCHAR(255),
+    phone VARCHAR(15),
+    email VARCHAR(100),
+    status VARCHAR(10) DEFAULT 'UNPAID'
+);
+
+
+
+
+INSERT INTO Employee (id, name, dob, address, salary, image, phone, email) VALUES
+(1, 'Elon Musk', '1971-06-28', 'Texas, USA', 120000, 'src\\view\\images\\profileImage\\elon_musk_royal_society.jpg', '0905123456', 'elon.musk@tesla.com'),
+(2, 'Taylor Swift', '1989-12-13', 'Nashville, Tennessee, USA', 95000, 'src/view/images/profileImage/TayLor.jpg', '0916234567', 'taylor.swift@musicworld.com'),
+(3, 'Cristiano Ronaldo', '1985-02-05', 'Lisbon, Portugal', 110000, 'src/view/images/profileImage/Ronaldo.jpg', '0927345678', 'cr7@footballstars.com'),
+(4, 'Emma Watson', '1990-04-15', 'Paris, France', 88000, 'src/view/images/profileImage/Emma_Watson.jpg', '0938456789', 'emma.watson@filmhub.com'),
+(5, 'Lionel Messi', '1987-06-24', 'Rosario, Argentina', 115000, 'src/view/images/profileImage/Messi.jpg', '0949567890', 'lionel.messi@fcb.com'),
+(6, 'Ariana Grande', '1993-06-26', 'Boca Raton, Florida, USA', 90000, 'src/view/images/profileImage/Ariana_Grande.jpg', '0950678901', 'ariana.grande@popmail.com'),
+(7, 'Keanu Reeves', '1964-09-02', 'Beirut, Lebanon', 102000, 'src/view/images/profileImage/Keanu_Reeves.jpg', '0961789012', 'keanu.reeves@hollywood.com');
+

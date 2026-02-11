@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="stationeryBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showInfo" prefHeight="227.0" prefWidth="160.0" style="-fx-background-color: white;" styleClass="White-background" stylesheets="@../css/StyleTungDZ.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StationeryController">
+   <children>
+      <HBox prefHeight="135.0" prefWidth="135.0">
+         <children>
+            <ImageView fx:id="stationeryImage" fitHeight="220.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Stationery/butdaquangstabilo.jpg" />
+               </image>
+               <styleClass>
+                  <String fx:value="text-font" />
+                  <String fx:value="size-item-image" />
+               </styleClass>
+            </ImageView>
+         </children>
+      </HBox>
+      <Label fx:id="stationeryName" text="Bút dạ quang">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="stationeryBrand" text="Name brand" />
+      <Label fx:id="stationeryPrice" onMouseClicked="#showInfo" text="1.09$">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
