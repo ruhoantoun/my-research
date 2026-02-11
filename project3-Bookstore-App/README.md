@@ -62,13 +62,4 @@ source /path/to/DatabaseForEveryone.txt
 ### 5. Demo sản phẩm
 - Link demo: https://drive.google.com/file/d/1OeJS1lEGdgFUmciYEQ39cGsVPYgN95Ca/view?usp=drive_link
 
-## Đóng góp & phát triển
 
-- Dự án tuân thủ mô hình MVC, dễ dàng mở rộng thêm tính năng hoặc giao diện mới.
-- Để đóng góp, hãy fork repository, tạo branch mới và gửi pull request.
-- Mọi ý kiến đóng góp hoặc báo lỗi xin gửi về email: vanthinhgvo@gmail.com.
-
-## Thông tin liên hệ
-
-- Tác giả: Thịnh Đông
-- Facebook: https://www.facebook.com/van.thinh.263183/
