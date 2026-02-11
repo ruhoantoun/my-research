@@ -1,0 +1,22 @@
+.event-manage-container {
+    padding: 20px 0;
+
+    .title {
+        margin-bottom: 30px;
+    }
+
+    form {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+        .form-label {
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            margin-top: 20px;
+        }
+    }
+}

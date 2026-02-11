@@ -1,0 +1,232 @@
+.event-detail-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.event-detail-header .event-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 15px;
+}
+.event-detail-header .event-status-badges {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.event-detail-header .event-status-badges .status-badge, .event-detail-header .event-status-badges .event-type-badge {
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+.event-detail-header .event-status-badges .status-badge.status-open {
+  background-color: #e3fcef;
+  color: #0abe5c;
+}
+.event-detail-header .event-status-badges .status-badge.status-full {
+  background-color: #ffede3;
+  color: #ff6b35;
+}
+.event-detail-header .event-status-badges .status-badge.status-closed {
+  background-color: #f0f0f0;
+  color: #767676;
+}
+.event-detail-header .event-status-badges .status-badge.status-canceled {
+  background-color: #ffebee;
+  color: #e53935;
+}
+.event-detail-header .event-status-badges .event-type-badge {
+  background-color: #e8f0fd;
+  color: #1a73e8;
+}
+
+.event-summary-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+.event-summary-top .info-item {
+  display: flex;
+  align-items: flex-start;
+  flex-basis: calc(33.33% - 14px);
+}
+@media (max-width: 768px) {
+  .event-summary-top .info-item {
+    flex-basis: 100%;
+  }
+}
+.event-summary-top .info-item .info-icon {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e8f0fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+.event-summary-top .info-item .info-icon i {
+  color: #1a73e8;
+  font-size: 18px;
+}
+.event-summary-top .info-item .info-content {
+  flex: 1;
+}
+.event-summary-top .info-item .info-content .info-label {
+  display: block;
+  font-size: 14px;
+  color: #757575;
+  margin-bottom: 4px;
+}
+.event-summary-top .info-item .info-content .info-value {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+.event-summary-top .info-item .info-content .info-value .registration-count {
+  font-weight: 600;
+  color: #1a73e8;
+}
+.event-summary-top .info-item .info-content .info-value .registration-separator {
+  margin: 0 3px;
+  color: #757575;
+}
+.event-summary-top .info-item .info-content .info-value .total-slots {
+  font-weight: 600;
+}
+.event-summary-top .info-item .info-content .info-value .available-slots {
+  font-size: 14px;
+  color: #0abe5c;
+  margin-left: 8px;
+}
+
+.events-details .event-description, .events-details .event-content {
+  margin-bottom: 30px;
+}
+.events-details .event-description h4, .events-details .event-content h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+  position: relative;
+  padding-bottom: 10px;
+}
+.events-details .event-description h4:after, .events-details .event-content h4:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #1a73e8;
+}
+.events-details .event-description .description-content, .events-details .event-description .content-html, .events-details .event-content .description-content, .events-details .event-content .content-html {
+  line-height: 1.7;
+  color: #555;
+  font-size: 16px;
+}
+.events-details .event-description .description-content p, .events-details .event-description .content-html p, .events-details .event-content .description-content p, .events-details .event-content .content-html p {
+  margin-bottom: 15px;
+}
+.events-details .mata-tags {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.react-sidebar .widget {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  margin-bottom: 30px;
+}
+.react-sidebar .widget .sidebar-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+.react-sidebar .widget .registration-status {
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.react-sidebar .widget .registration-status.full {
+  background-color: #ffede3;
+  color: #ff6b35;
+}
+.react-sidebar .widget .registration-status.closed {
+  background-color: #f0f0f0;
+  color: #767676;
+}
+.react-sidebar .widget .registration-status.canceled {
+  background-color: #ffebee;
+  color: #e53935;
+}
+.react-sidebar .widget .registration-status i {
+  font-size: 18px;
+}
+.react-sidebar .price__course {
+  margin-bottom: 20px;
+}
+.react-sidebar .price__course li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.react-sidebar .price__course li i {
+  margin-right: 10px;
+  color: #1a73e8;
+  font-size: 18px;
+}
+.react-sidebar .price__course li b {
+  margin-left: auto;
+  font-weight: 600;
+}
+.react-sidebar .start-btn {
+  display: block;
+  text-align: center;
+  background-color: #1a73e8;
+  color: #fff;
+  padding: 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+.react-sidebar .start-btn:hover {
+  background-color: #0d62ca;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(26, 115, 232, 0.4);
+}
+.react-sidebar .recent-date li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px dashed #eee;
+}
+.react-sidebar .recent-date li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.react-sidebar .recent-date li b {
+  font-weight: 600;
+  color: #333;
+}/*# sourceMappingURL=EventDetailsMain.css.map */

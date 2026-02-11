@@ -1,0 +1,88 @@
+/* CSS cho component ManageListMain */
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-container .input-group {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.search-container .input-group-text {
+    background-color: white;
+    border-right: none;
+}
+
+.search-container input.form-control {
+    border-left: none;
+    padding: 12px 15px;
+    font-size: 14px;
+}
+
+.search-container input.form-control:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.from-control {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    margin-right: 10px;
+    font-size: 14px;
+    background-color: white;
+    min-width: 140px;
+    cursor: pointer;
+}
+
+.back-pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.back-pagination li {
+    margin: 0 5px;
+}
+
+.back-pagination li a {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.back-pagination li.active a {
+    background-color: #2b70fa;
+    color: white;
+}
+
+.back-pagination li a:hover {
+    background-color: #2b70fa;
+    color: white;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    color: #2b70fa;
+}
+
+@media (max-width: 768px) {
+    .from-control {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    
+    .col-md-10.text-right {
+        margin-top: 15px;
+    }
+}

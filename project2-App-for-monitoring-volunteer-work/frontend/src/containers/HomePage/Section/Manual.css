@@ -1,0 +1,116 @@
+.section-doctors {
+  background-color: #f8f9fa;
+  padding: 50px;
+}
+.section-doctors .doctors-content {
+  width: auto;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.section-doctors .doctors-content .doctors-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-doctors .doctors-content .doctors-header .doctors-title {
+  color: #8bc7f3;
+  border-radius: 5px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+.section-doctors .doctors-content .doctors-header .btn-outline-primary {
+  color: #000000;
+  border-color: #000000;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+  margin-right: 10px;
+}
+.section-doctors .doctors-content .doctors-header .btn-outline-primary:hover {
+  color: #ffffff;
+  background-color: #8fc5ff;
+  border-color: #80bdff;
+}
+.section-doctors .doctors-content .doctors-header .btn-outline-primary:focus, .section-doctors .doctors-content .doctors-header .btn-outline-primary:active {
+  color: #ffffff;
+  background-color: #9cccff;
+  border-color: #91c6ff;
+  box-shadow: 0 0 0 0.005rem rgba(0, 0, 0, 0.5);
+}
+.section-doctors .doctors-content .doctors-item {
+  align-items: center;
+  padding: 0 10px;
+}
+.section-doctors .doctors-content .doctors-item .doctors-img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+.section-doctors .doctors-content .doctors-item .doctors-img:hover {
+  transform: scale(1.05);
+}
+.section-doctors .doctors-content .doctors-item .doctors-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  display: block;
+  transition: color 0.3s;
+}
+.section-doctors .doctors-content .doctors-item .doctors-title:hover {
+  color: #007bff;
+}
+.section-doctors .slick-prev, .section-doctors .slick-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #000000;
+  border-radius: 50%;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.section-doctors .slick-prev {
+  left: 10px;
+}
+.section-doctors .slick-next {
+  right: 10px;
+}
+.section-doctors .slick-prev:hover, .section-doctors .slick-next:hover {
+  background-color: #8ebef1;
+}
+.section-doctors .slick-dots {
+  position: absolute;
+  bottom: -30px;
+  display: flex !important;
+  justify-content: center;
+  width: 100%;
+}
+.section-doctors .slick-dots li {
+  margin: 0 5px;
+}
+.section-doctors .slick-dots li button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d8d8d8;
+  transition: background-color 0.3s;
+}
+.section-doctors .slick-dots li.slick-active button {
+  background-color: #007bff;
+}
+.section-doctors .slick-dots li button:hover {
+  background-color: #8ebef1;
+}/*# sourceMappingURL=Manual.css.map */

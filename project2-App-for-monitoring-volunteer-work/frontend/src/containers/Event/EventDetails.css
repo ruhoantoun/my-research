@@ -1,0 +1,62 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.loading-container .spinner-border {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 20px;
+}
+.loading-container .loading-text {
+  font-size: 18px;
+  color: #666;
+}
+
+.event-not-found {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+}
+.event-not-found .error-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.event-not-found .error-container .error-icon {
+  width: 90px;
+  height: 90px;
+  background-color: #ffebee;
+  border-radius: 50%;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.event-not-found .error-container .error-icon i {
+  font-size: 40px;
+  color: #e53935;
+}
+.event-not-found .error-container h3 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.event-not-found .error-container p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.event-not-found .error-container p:last-of-type {
+  color: #999;
+  font-style: italic;
+}/*# sourceMappingURL=EventDetails.css.map */

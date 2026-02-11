@@ -1,0 +1,93 @@
+.section-speciality {
+  background-color: #f8f9fa;
+  padding: 50px;
+}
+.section-speciality .speciality-content {
+  width: auto;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.section-speciality .speciality-content .speciality-title {
+  color: #8bc7f3;
+  border-radius: 5px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.section-speciality .speciality-content .speciality-item {
+  align-items: center;
+  padding: 0 10px;
+}
+.section-speciality .speciality-content .speciality-item .speciality-img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+.section-speciality .speciality-content .speciality-item .speciality-img:hover {
+  transform: scale(1.05);
+}
+.section-speciality .speciality-content .speciality-item .speciality-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  display: block;
+  transition: color 0.3s;
+}
+.section-speciality .speciality-content .speciality-item .speciality-title:hover {
+  color: #007bff;
+}
+.section-speciality .slick-prev, .section-speciality .slick-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #000000;
+  border-radius: 50%;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.section-speciality .slick-prev {
+  left: 10px;
+}
+.section-speciality .slick-next {
+  right: 10px;
+}
+.section-speciality .slick-prev:hover, .section-speciality .slick-next:hover {
+  background-color: #8ebef1;
+}
+.section-speciality .slick-dots {
+  position: absolute;
+  bottom: -30px;
+  display: flex !important;
+  justify-content: center;
+  width: 100%;
+}
+.section-speciality .slick-dots li {
+  margin: 0 5px;
+}
+.section-speciality .slick-dots li button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d8d8d8;
+  transition: background-color 0.3s;
+}
+.section-speciality .slick-dots li.slick-active button {
+  background-color: #007bff;
+}
+.section-speciality .slick-dots li button:hover {
+  background-color: #8ebef1;
+}/*# sourceMappingURL=Speciality.css.map */

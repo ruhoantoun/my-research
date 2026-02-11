@@ -1,0 +1,35 @@
+.user-display-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+
+    .table-responsive {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        padding: 15px;
+
+        table {
+            margin-bottom: 0;
+
+            th {
+                font-weight: 600;
+                background-color: #f8f9fa;
+                border-bottom: 2px solid #dee2e6;
+                white-space: nowrap;
+            }
+
+            td {
+                vertical-align: middle;
+                padding: 12px 8px;
+            }
+
+            .btn {
+                padding: 4px 8px;
+                
+                svg {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

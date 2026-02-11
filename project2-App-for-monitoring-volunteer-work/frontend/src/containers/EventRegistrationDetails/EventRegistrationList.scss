@@ -1,0 +1,560 @@
+.event-registration-container {
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  // Card styles
+  .card {
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border: none;
+  
+      .card-header {
+          background-color: #f8f9fa;
+          padding: 15px 20px;
+          border-bottom: 1px solid #eee;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+          
+          h3 {
+              margin: 0;
+              font-size: 1.2rem;
+              font-weight: 600;
+              color: #333;
+          }
+      }
+  
+      .card-body {
+          padding: 20px;
+      }
+  }
+
+  // Event summary
+  .event-summary-card {
+      
+      .registration-progress {
+          padding: 10px;
+          
+          .progress-info {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 10px;
+              
+              strong {
+                  font-weight: 600;
+              }
+          }
+          
+          .progress {
+              height: 20px;
+              border-radius: 30px;
+              box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+              margin-bottom: 15px;
+              
+              .progress-bar {
+                  text-align: center;
+                  font-weight: 500;
+                  font-size: 12px;
+                  border-radius: 30px;
+                  transition: width 0.6s ease;
+              }
+          }
+      }
+      
+      .summary-stats {
+          margin-top: 20px;
+          
+          .stats-row {
+              display: flex;
+              gap: 15px;
+              margin-bottom: 15px;
+              
+              &:last-child {
+                  margin-bottom: 0;
+              }
+              
+              .stat-card {
+                  flex: 1;
+                  display: flex;
+                  align-items: center;
+                  padding: 15px;
+                  border-radius: 8px;
+                  
+                  .stat-icon {
+                      width: 50px;
+                      height: 50px;
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin-right: 15px;
+                      
+                      i {
+                          font-size: 20px;
+                          color: white;
+                      }
+                  }
+                  
+                  .stat-content {
+                      .stat-value {
+                          font-size: 1.8rem;
+                          font-weight: 700;
+                          line-height: 1;
+                          margin-bottom: 5px;
+                      }
+                      
+                      .stat-label {
+                          font-size: 0.9rem;
+                          color: #666;
+                      }
+                  }
+                  
+                  &.total {
+                      background-color: #e3f2fd;
+                      .stat-icon { background-color: #2196f3; }
+                      .stat-value { color: #0d47a1; }
+                  }
+                  
+                  &.paid {
+                      background-color: #e8f5e9;
+                      .stat-icon { background-color: #4caf50; }
+                      .stat-value { color: #1b5e20; }
+                  }
+                  
+                  &.unpaid {
+                      background-color: #fff3e0;
+                      .stat-icon { background-color: #ff9800; }
+                      .stat-value { color: #e65100; }
+                  }
+                  
+                  &.cash {
+                      background-color: #f3e5f5;
+                      .stat-icon { background-color: #9c27b0; }
+                      .stat-value { color: #4a148c; }
+                  }
+                  
+                  &.bank {
+                      background-color: #e0f7fa;
+                      .stat-icon { background-color: #00bcd4; }
+                      .stat-value { color: #006064; }
+                  }
+              }
+          }
+      }
+  }
+
+  // Filter section
+  .registration-filter-container {
+    margin-top: 50px;
+      .form-group {
+          margin-bottom: 0;
+          
+          label {
+              margin-bottom: 5px;
+              font-weight: 500;
+              color: #555;
+          }
+      }
+      
+      .search-input {
+          position: relative;
+          
+          i {
+              position: absolute;
+              left: 10px;
+              top: 10px;
+              color: #999;
+          }
+          
+          input {
+              padding-left: 35px;
+          }
+      }
+  }
+
+  // Registration table
+  .registration-table-container {
+    margin-top: 50px;
+      .status-badge {
+          display: inline-block;
+          padding: 5px 10px;
+          border-radius: 20px;
+          font-size: 0.85rem;
+          font-weight: 500;
+          text-align: center;
+          
+          &.paid {
+              background-color: #e8f5e9;
+              color: #1b5e20;
+              border: 1px solid #4caf50;
+          }
+          
+          &.unpaid {
+              background-color: #fff3e0;
+              color: #e65100;
+              border: 1px solid #ff9800;
+          }
+      }
+      
+      .expanded-row {
+          background-color: #f9f9f9;
+          
+          .expanded-content {
+              padding: 15px;
+              
+              h5 {
+                  font-size: 1rem;
+                  font-weight: 600;
+                  margin-bottom: 10px;
+                  color: #444;
+              }
+              
+              .user-info {
+                  ul {
+                      list-style: none;
+                      padding-left: 0;
+                      margin: 0;
+                      
+                      li {
+                          margin-bottom: 8px;
+                          
+                          strong {
+                              display: inline-block;
+                              min-width: 80px;
+                          }
+                      }
+                  }
+              }
+              
+              .note-info {
+                  .note-content {
+                      background-color: #f1f1f1;
+                      border-radius: 5px;
+                      padding: 12px;
+                      min-height: 60px;
+                      
+                      em {
+                          color: #999;
+                      }
+                  }
+              }
+          }
+      }
+      
+      .no-results {
+          text-align: center;
+          padding: 30px;
+          
+          i {
+              font-size: 30px;
+              color: #ccc;
+              margin-bottom: 10px;
+          }
+          
+          p {
+              color: #777;
+              margin: 0;
+          }
+      }
+  }
+}
+
+// CSS cho các nút thao tác
+.action-buttons {
+    display: flex;
+    justify-content: space-around;
+    
+    .btn {
+        padding: 0.25rem 0.5rem;
+        
+        i {
+            font-size: 0.875rem;
+        }
+    }
+}
+
+// CSS cho modal chỉnh sửa
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+}
+
+.edit-modal {
+    width: 80%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    
+    .edit-modal-content {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .edit-modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        border-bottom: 1px solid #e9ecef;
+        
+        h4 {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+        
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #6c757d;
+            
+            &:hover {
+                color: #343a40;
+            }
+        }
+    }
+    
+    .edit-modal-body {
+        padding: 1rem;
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+    
+    .edit-modal-footer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        padding: 1rem;
+        border-top: 1px solid #e9ecef;
+    }
+}
+
+// CSS cho modal xác nhận xóa
+.delete-confirm-modal {
+    width: 90%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    
+    .delete-modal-content {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .delete-modal-header {
+        padding: 1rem;
+        border-bottom: 1px solid #e9ecef;
+        
+        h4 {
+            margin: 0;
+            font-size: 1.25rem;
+            color: #dc3545;
+        }
+    }
+    
+    .delete-modal-body {
+        padding: 1rem;
+        
+        p {
+            margin-bottom: 0.5rem;
+            
+            &:last-child {
+                color: #dc3545;
+                font-weight: 500;
+            }
+        }
+    }
+    
+    .delete-modal-footer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        padding: 1rem;
+        border-top: 1px solid #e9ecef;
+    }
+}
+
+// Hiệu ứng khi hover vào hàng
+.table tr:hover {
+    background-color: #f8f9fa;
+}
+
+// Style cho badge trạng thái
+.status-badge {
+    &.paid {
+        background-color: #d4edda;
+        color: #155724;
+        border-color: #c3e6cb;
+    }
+    
+    &.unpaid {
+        background-color: #fff3cd;
+        color: #856404;
+        border-color: #ffeeba;
+    }
+}
+
+
+
+// CSS cho các nút thao tác
+.action-buttons {
+    display: flex;
+    justify-content: space-around;
+    
+    .btn {
+        padding: 0.25rem 0.5rem;
+        
+        i {
+            font-size: 0.875rem;
+        }
+    }
+}
+
+// CSS cho modal chỉnh sửa
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+}
+
+.edit-modal {
+    width: 80%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    
+    .edit-modal-content {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .edit-modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        border-bottom: 1px solid #e9ecef;
+        
+        h4 {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+        
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #6c757d;
+            
+            &:hover {
+                color: #343a40;
+            }
+        }
+    }
+    
+    .edit-modal-body {
+        padding: 1rem;
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+    
+    .edit-modal-footer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        padding: 1rem;
+        border-top: 1px solid #e9ecef;
+    }
+}
+
+// CSS cho modal xác nhận xóa
+.delete-confirm-modal {
+    width: 90%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    
+    .delete-modal-content {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .delete-modal-header {
+        padding: 1rem;
+        border-bottom: 1px solid #e9ecef;
+        
+        h4 {
+            margin: 0;
+            font-size: 1.25rem;
+            color: #dc3545;
+        }
+    }
+    
+    .delete-modal-body {
+        padding: 1rem;
+        
+        p {
+            margin-bottom: 0.5rem;
+            
+            &:last-child {
+                color: #dc3545;
+                font-weight: 500;
+            }
+        }
+    }
+    
+    .delete-modal-footer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        padding: 1rem;
+        border-top: 1px solid #e9ecef;
+    }
+}
+
+// Hiệu ứng khi hover vào hàng
+.table tr:hover {
+    background-color: #f8f9fa;
+}
+
+// Style cho badge trạng thái
+.status-badge {
+    &.paid {
+        background-color: #d4edda;
+        color: #155724;
+        border-color: #c3e6cb;
+    }
+    
+    &.unpaid {
+        background-color: #fff3cd;
+        color: #856404;
+        border-color: #ffeeba;
+    }
+}
+
+

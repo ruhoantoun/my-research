@@ -1,0 +1,110 @@
+.section-speciality {
+    background-color: #f8f9fa;
+    padding: 50px;
+
+    .speciality-content {
+        width: auto;
+        margin: 0 auto;
+        padding: 20px;
+        background: white;
+        border-radius: 3px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        .speciality-title {
+            color: #8bc7f3; // Màu chữ trắng
+            border-radius: 5px; // Bo tròn các góc
+            font-size: 2.5rem; // Kích thước chữ lớn hơn
+            font-weight: bold; // In đậm chữ
+            text-transform: uppercase; // Chuyển chữ thành chữ in hoa
+        }
+        
+        .speciality-item {
+            align-items: center;
+            padding: 0 10px;
+
+            .speciality-img {
+                max-width: 100%; // Đảm bảo hình ảnh không vượt quá chiều rộng của slide
+                height: auto;
+                margin-bottom: 10px; // Khoảng cách giữa hình ảnh và thẻ span
+                transition: transform 0.3s; // Hiệu ứng biến đổi mượt mà khi hover
+            }
+
+            .speciality-img:hover {
+                transform: scale(1.05); // Hiệu ứng phóng to khi hover
+            }
+
+            .speciality-title {
+                font-size: 1rem;
+                font-weight: bold; // Làm nổi bật tiêu đề ảnh
+                color: #333;
+                text-align: center; // Căn giữa tiêu đề ảnh
+                display: block; // Đảm bảo thẻ span hiển thị dưới ảnh
+                transition: color 0.3s; // Hiệu ứng chuyển màu mượt mà khi hover
+            }
+
+            .speciality-title:hover {
+                color: #007bff; // Thay đổi màu sắc khi hover
+            }
+        }
+    }
+
+    .slick-prev, .slick-next {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background-color: #000000;
+        border-radius: 50%;
+        padding: 10px;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #ffffff;
+        font-size: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .slick-prev {
+        left: 10px;
+    }
+
+    .slick-next {
+        right: 10px;
+    }
+
+    .slick-prev:hover, .slick-next:hover {
+        background-color: #8ebef1;
+    }
+
+    // Thêm chấm chỉ báo tùy chỉnh cho slider
+    .slick-dots {
+        position: absolute;
+        bottom: -30px;
+        display: flex !important;
+        justify-content: center;
+        width: 100%;
+
+        li {
+            margin: 0 5px;
+
+            button {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: #d8d8d8;
+                transition: background-color 0.3s;
+            }
+
+            &.slick-active button {
+                background-color: #007bff;
+            }
+
+            button:hover {
+                background-color: #8ebef1;
+            }
+        }
+    }
+}

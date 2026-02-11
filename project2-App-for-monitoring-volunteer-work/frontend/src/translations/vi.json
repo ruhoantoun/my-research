@@ -1,0 +1,72 @@
+{
+    "home-header": {
+        "speciality": "Chuyên khoa",
+        "search-doctor-speciality": "Tìm bác sĩ theo chuyên khoa",
+        "health-facility": "Cơ sở y tế",
+        "choose-hospital": "Chọn bệnh viện phòng khám",
+        "doctor": "Bác sĩ",
+        "choose-good-doctor": "Chọn bác sĩ giỏi",
+        "examination-package": "Gói khám",
+        "general-health-check": "Khám sức khỏe tổng quát",
+        "support": "Hỗ trợ",
+        "platform": "NỀN TẢNG Y TẾ",
+        "care": "CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
+        "specialist": "Khám Chuyên khoa",
+        "remote": "Khám từ xa",
+        "general": "Khám tổng quát",
+        "test": "Xét nghiệm y học",
+        "mental": "Sức khỏe tinh thần",
+        "dental": "Khám nha khoa",
+        "welcome": "Xin chào, "
+    },
+
+    "menu": {
+        "system": {
+            "header": "Hệ thống",
+            "system-administrator": {
+                "header": "Quản trị hệ thống",
+                "user-manage": "Quản lý người sử dụng",
+                "user-redux": "Quản lý người dùng redux",
+                "register-package-group-or-account": "Đăng ký gói dịch vụ cho nhóm/tài khoản"
+            },
+            "system-parameter": {
+                "header": "Tham số hệ thống"
+            }
+        },
+        "admin": {
+            "manage-user": "Người dùng",
+            "user-display": "Danh sách người dùng",
+            "manage-admin": "Quản lý admin",
+            "crud": "CRUD user",
+            "user-create": "Tạo người dùng mới",
+            "manage-clinic": "Quản lý phòng khám",
+            "clinic": "Phòng khám",
+            "specialty": "Chuyên khoa",
+            "manage-specialty": "Quản lý chuyên khoa",
+            "blogs": "Bài đăng",
+            "manage-blogs": "Quản lý bài đăng"
+        },
+
+        "doctor": {
+            "manage-patient": "Quản lý bệnh nhân",
+            "manage-schedule": "Quản lý lịch khám"
+        }
+        
+    },
+    "manage-user": {
+        "title": "Tạo người dùng bằng Redux của anhtonton",
+        "add-new-user": "Thêm mới người dùng",
+        "email": "Email",
+        "password": "Mật khẩu",
+        "firstname": "Tên",
+        "lastname": "Họ",
+        "phonenumber": "Số điện thoại",
+        "address": "Địa chỉ",
+        "gender": "Giới tính",
+        "position": "Chức vụ",
+        "role": "Vai trò",
+        "avatar": "Ảnh đại diện",
+        "example-file-input": "-File đầu vào",
+        "submit": "Gửi"
+    }
+}

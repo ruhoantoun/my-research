@@ -1,0 +1,203 @@
+@charset "UTF-8";
+.home-header-container {
+  height: 60px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.home-header-container .home-header-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.home-header-container .home-header-content .left-content {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.home-header-container .home-header-content .left-content .header-logo {
+  height: 45px;
+  width: 120px;
+  background: url("../../assets/logo.png") no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.home-header-container .home-header-content .left-content .header-logo:hover {
+  transform: scale(1.1);
+}
+.home-header-container .home-header-content .left-content .fa-bars {
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.home-header-container .home-header-content .left-content .fa-bars:hover {
+  color: #007bff;
+}
+.home-header-container .home-header-content .center-content {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+.home-header-container .home-header-content .center-content .child-content {
+  text-align: center;
+  cursor: pointer;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.home-header-container .home-header-content .center-content .child-content:hover {
+  background-color: #f8f9fa;
+}
+.home-header-container .home-header-content .center-content .child-content b {
+  font-size: 16px;
+  color: #333;
+}
+.home-header-container .home-header-content .center-content .child-content .sub-title {
+  font-size: 12px;
+  color: #666;
+}
+.home-header-container .home-header-content .right-content {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+.home-header-container .home-header-content .right-content .support .btn-info {
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 5px 15px;
+  transition: all 0.3s ease;
+}
+.home-header-container .home-header-content .right-content .support .btn-info:hover {
+  background-color: #ffffff;
+  border-color: #004085;
+}
+.home-header-container .home-header-content .right-content .language-vi {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.home-header-container .home-header-content .right-content .language-vi:hover {
+  color: #007bff;
+}
+.home-header-container .home-header-content .right-content .language-vi.active {
+  color: #ff0000;
+}
+.home-header-container .home-header-content .right-content .language-en {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.home-header-container .home-header-content .right-content .language-en:hover {
+  color: #007bff;
+}
+.home-header-container .home-header-content .right-content .language-en.active {
+  color: #0dff00;
+}
+
+.home-header-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.805), rgba(0, 0, 0, 0.314)), url(../../assets/header-bg.jpg);
+  height: 600px;
+  background-size: cover; /* Hoặc sử dụng 'contain' nếu bạn muốn ảnh nền vừa với khung */
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 15px;
+  opacity: 0.9;
+}
+.home-header-banner .title1 {
+  font-size: 40px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 100px;
+  align-items: center;
+}
+.home-header-banner .title2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 15px;
+  align-items: center;
+}
+.home-header-banner .search {
+  border-radius: 5px;
+  background: #8ebef1;
+  opacity: 0.9; /* Tăng độ trong suốt */
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  padding: 5px; /* Tăng padding để có cảm giác thoáng hơn */
+  justify-content: center;
+  margin: auto;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ */
+  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
+}
+.home-header-banner .search:hover {
+  background: #729fd8; /* Đổi màu nền khi di chuột */
+}
+.home-header-banner .search i {
+  margin: 0 5px;
+  color: #ffffff; /* Đổi màu icon */
+}
+.home-header-banner .search input {
+  height: 35px; /* Tăng chiều cao */
+  width: 400px; /* Tăng chiều rộng */
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff; /* Đổi màu chữ */
+  font-size: 14px; /* Tăng kích thước chữ */
+  padding-left: 10px; /* Thêm khoảng trống bên trái */
+}
+.home-header-banner .search input::-moz-placeholder {
+  color: #e0e0e0; /* Đổi màu placeholder */
+}
+.home-header-banner .search input::placeholder {
+  color: #e0e0e0; /* Đổi màu placeholder */
+}
+.home-header-banner .services {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 15px; /* Tăng padding để tạo không gian */
+  margin-top: 150px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng đổ bóng */
+  border-radius: 10px; /* Bo tròn các góc */
+}
+.home-header-banner .services .service-item {
+  margin: 10px;
+  text-align: center;
+  padding: 15px; /* Thêm padding để tạo không gian */
+  border-radius: 10px; /* Bo tròn các góc */
+  transition: transform 0.3s ease, background 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
+}
+.home-header-banner .services .service-item:hover {
+  transform: translateY(-10px); /* Hiệu ứng nổi lên khi di chuột */
+}
+.home-header-banner .services .service-item i {
+  font-size: 32px; /* Tăng kích thước biểu tượng */
+  color: #ffffff;
+  transition: color 0.3s ease; /* Thêm hiệu ứng chuyển đổi màu sắc */
+}
+.home-header-banner .services .service-item i:hover {
+  color: #8ebef1; /* Đổi màu biểu tượng khi di chuột */
+}
+.home-header-banner .services .service-item p {
+  color: #ffffff;
+  margin-top: 10px; /* Tăng khoảng cách với biểu tượng */
+  font-weight: bold; /* Tăng độ đậm của chữ */
+}/*# sourceMappingURL=HomeHeader.css.map */

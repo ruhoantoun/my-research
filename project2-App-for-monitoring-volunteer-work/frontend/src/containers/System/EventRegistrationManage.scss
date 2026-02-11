@@ -1,0 +1,238 @@
+.event-registration-manage-container {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  
+  h3 {
+    color: #343a40;
+  }
+  
+  .card {
+    border: none;
+    border-radius: 8px;
+    
+    .card-header {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      
+      h5 {
+        color: #343a40;
+      }
+    }
+    
+    .card-body {
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+    }
+  }
+  
+  .shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+  }
+  
+  // Table styles
+  .table {
+    margin-bottom: 0;
+    
+    th, td {
+      vertical-align: middle;
+      padding: 0.75rem;
+    }
+    
+    th {
+      font-weight: 600;
+      
+      &.sortable {
+        cursor: pointer;
+        
+        &:hover {
+          background-color: #f0f0f0;
+        }
+      }
+    }
+    
+    .badge {
+      font-weight: 500;
+      padding: 0.4em 0.65em;
+    }
+    
+    .text-success, .text-muted {
+      display: flex;
+      align-items: center;
+      
+      svg {
+        margin-right: 0.25rem;
+      }
+    }
+  }
+  
+  // Form controls
+  .input-group {
+    .input-group-text {
+      background-color: #fff;
+    }
+    
+    .form-control, .form-select {
+      &:focus {
+        box-shadow: none;
+        border-color: #80bdff;
+      }
+    }
+  }
+  
+  // Button styles
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    svg {
+      margin-right: 0.25rem;
+    }
+    
+    &.btn-sm {
+      padding: 0.25rem 0.5rem;
+    }
+  }
+  
+  // Modal styles
+  .modal {
+    .modal-header {
+      background-color: #f8f9fa;
+      
+      .modal-title {
+        font-weight: 600;
+      }
+    }
+    
+    .modal-body {
+      .fw-bold {
+        color: #6c757d;
+      }
+      
+      h5 {
+        color: #343a40;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+    }
+    
+    .nav-tabs {
+      .nav-link {
+        color: #495057;
+        
+        &.active {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  
+  // Responsive styles
+  @media (max-width: 767px) {
+    .card-body {
+      padding: 1rem;
+    }
+    
+    .row > div {
+      margin-bottom: 1rem;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Thêm vào file scss của bạn
+.event-tabs {
+  .nav-tabs {
+    border-bottom: 1px solid #e9ecef;
+
+    .nav-item {
+      margin-bottom: -1px;
+
+      .nav-link {
+        border: 1px solid transparent;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+        color: #495057;
+        background-color: transparent;
+        padding: 0.75rem 1rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          border-color: #e9ecef #e9ecef #dee2e6;
+          background-color: #f8f9fa;
+        }
+
+        &.active {
+          color: #495057;
+          background-color: #fff;
+          border-color: #dee2e6 #dee2e6 #fff;
+          font-weight: 600;
+        }
+
+        i {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Styling cho thẻ thống kê
+.statistics-card {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-title {
+    font-size: 0.9rem;
+    color: #8898aa;
+    margin-bottom: 0.25rem;
+  }
+  
+  .card-value {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  
+  .trend-indicator {
+    font-size: 0.8rem;
+    
+    &.positive {
+      color: #2dce89;
+    }
+    
+    &.negative {
+      color: #f5365c;
+    }
+  }
+}
+
+// Styling cho biểu đồ
+.chart-container {
+  height: 300px;
+  width: 100%;
+}
+
+// Table styling trong thống kê
+.statistics-table {
+  th {
+    font-weight: 600;
+    background-color: #f8f9fa;
+  }
+  
+  td, th {
+    vertical-align: middle;
+    padding: 0.75rem;
+  }
+}

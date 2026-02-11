@@ -1,0 +1,70 @@
+{
+    "home-header": {
+        "speciality": "Speciality",
+        "search-doctor-speciality": "Find a doctor by speciality",
+        "health-facility": "Health Facility",
+        "choose-hospital": "Choose a hospital or clinic",
+        "doctor": "Doctor",
+        "choose-good-doctor": "Choose a good doctor",
+        "examination-package": "Examination Package",
+        "general-health-check": "General health check",
+        "support": "Support",
+        "platform": "HEALTHCARE PLATFORM",
+        "care": "COMPREHENSIVE HEALTHCARE",
+        "specialist": "Specialist Consultation",
+        "remote": "Remote Consultation",
+        "general": "General Examination",
+        "test": "Medical Testing",
+        "mental": "Mental Health",
+        "dental": "Dental Consultation",
+        "welcome": "Welcome, "
+    },
+
+    "menu": {
+        "system": {
+            "header": "System",
+            "system-administrator": {
+                "header": "System Administrator",
+                "user-manage": "User manage",
+                "user-redux": "User manage redux",
+                "register-package-group-or-account": "Register service package for group/account"
+            },
+            "system-parameter": {
+                "header": "System-parameter"
+            }
+        },
+        "admin": {
+            "manage-user": "User",
+            "user-display": "List of users",
+            "manage-admin": "Admin Management",
+            "crud": "CRUD user",
+            "user-create": "Create New User",
+            "manage-clinic": "Clinic management",
+            "clinic": "Clinic",
+            "specialty": "Specialty",
+            "manage-specialty": "Manage Specialty",
+            "blogs": "Blog",
+            "manage-blogs": "Manage Blog"
+        },
+        "doctor": {
+            "manage-patient": "Patient Management",
+            "manage-schedule": "Manage Schedule"
+        }
+    },
+    "manage-user": {
+        "title": "User Create Redux by anhtonton",
+        "add-new-user": "Add New User",
+        "email": "Email",
+        "password": "Password",
+        "firstname": "First Name",
+        "lastname": "Last Name",
+        "phonenumber": "Phone Number",
+        "address": "Address",
+        "gender": "Gender",
+        "position": "Position",
+        "role": "Role",
+        "avatar": "Avatar",
+        "example-file-input": "-File Input",
+        "submit": "Submit"
+    }
+}

@@ -1,0 +1,210 @@
+// Biến màu chính
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$light-color: #f8f9fa;
+$dark-color: #343a40;
+$border-color: #0080ff;
+
+// Styling cho phần profile
+.profile-container {
+  padding: 6rem 0 4.5rem;
+  background-color: $light-color;
+  
+  // Card chứa thông tin người dùng
+  .profile-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+  }
+  
+  // Styling cho avatar
+  .user-image-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    
+    img {
+      max-width: 180px;
+      border-radius: 5px !important;
+      border: 1px solid $border-color;
+      transition: transform 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  
+  // Nút theo dõi
+  .follow-button {
+    background-color: $primary-color;
+    color: white;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    
+    .plus-icon {
+      margin-left: 0.5rem;
+      font-size: 1.25rem;
+    }
+    
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      transform: translateY(-2px);
+      text-decoration: none;
+      color: white;
+    }
+  }
+  
+  // Khu vực thống kê
+  .stats-area {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    padding: 1rem;
+    
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    li {
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background-color: rgba($primary-color, 0.05);
+      }
+      
+      .count__content {
+        text-align: center;
+        
+        .counter {
+          display: block;
+          font-size: 1.75rem;
+          font-weight: 700;
+          color: $primary-color;
+          line-height: 1.2;
+        }
+        
+        p {
+          margin-top: 0.5rem;
+          margin-bottom: 0;
+          color: $secondary-color;
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+  
+  // Phần thông tin chi tiết
+  .user-details {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    padding: 1.5rem;
+    
+    .user-section {
+      list-style: none;
+      padding-left: 0;
+      
+      li {
+        display: flex;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid $border-color;
+        
+        &:last-child {
+          border-bottom: none;
+        }
+        
+        .name {
+          font-weight: 600;
+          min-width: 140px;
+          color: $dark-color;
+        }
+        
+        em {
+          font-style: normal;
+          color: $secondary-color;
+        }
+        
+        &.social {
+          em {
+            display: flex;
+            gap: 0.75rem;
+            
+            a {
+              width: 2rem;
+              height: 2rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: $light-color;
+              border-radius: 50%;
+              color: $secondary-color;
+              transition: all 0.3s ease;
+              
+              &:hover {
+                background-color: $primary-color;
+                color: white;
+                transform: translateY(-3px);
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    h3 {
+      margin-top: 2rem;
+      padding-bottom: 0.75rem;
+      position: relative;
+      font-weight: 600;
+      
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 3px;
+        background-color: $primary-color;
+      }
+    }
+    
+    p {
+      color: $secondary-color;
+      line-height: 1.6;
+    }
+  }
+  
+  // Styling cho loading
+  .loading-container {
+    text-align: center;
+    padding: 3rem 0;
+    
+    .spinner-border {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  
+  // Styling cho thông báo lỗi
+  .error-container {
+    padding: 1.5rem;
+    
+    .alert {
+      border-radius: 0.5rem;
+    }
+  }
+}

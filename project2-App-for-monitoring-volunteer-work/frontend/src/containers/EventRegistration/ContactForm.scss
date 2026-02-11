@@ -1,0 +1,120 @@
+.event-registration-container {
+    min-height: 100vh;
+  
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  
+    .registration-form-wrapper {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 40px;
+      overflow: hidden;
+  
+      .form-header {
+        text-align: center;
+        margin-bottom: 40px;
+  
+        h2 {
+          color: #1a73e8;
+          font-size: 32px;
+          margin-bottom: 15px;
+          font-weight: 600;
+        }
+  
+        p {
+          color: #666;
+          font-size: 16px;
+        }
+      }
+  
+      .registration-form {
+        .form-row {
+          display: flex;
+          margin-bottom: 20px;
+          gap: 20px;
+  
+          @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 15px;
+          }
+        }
+  
+        .form-group {
+          flex: 1;
+          position: relative;
+  
+          &.full-width {
+            width: 100%;
+          }
+  
+          label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+            
+            .required {
+              color: #d93025;
+              margin-left: 4px;
+            }
+          }
+  
+          input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            background-color: #fff;
+  
+            &:focus {
+              outline: none;
+              border-color: #1a73e8;
+              box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+            }
+            
+            &::placeholder {
+              color: #aaa;
+            }
+          }
+  
+          textarea {
+            resize: vertical;
+            min-height: 120px;
+          }
+        }
+  
+        .form-actions {
+          margin-top: 30px;
+          text-align: center;
+  
+          .register-button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(26, 115, 232, 0.3);
+  
+            &:hover {
+              background-color: #0d62ca;
+              transform: translateY(-2px);
+              box-shadow: 0 6px 10px rgba(26, 115, 232, 0.4);
+            }
+  
+            &:active {
+              transform: translateY(0);
+              box-shadow: 0 2px 4px rgba(26, 115, 232, 0.3);
+            }
+          }
+        }
+      }
+    }
+  }
